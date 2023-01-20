@@ -1,2 +1,14 @@
 # SOEN341
-2022 SOEN 341 Project - Career Website
+## Group Members:
+- William Heron (40123670): wm.heron@gmail.com
+- Janice Jacqueline (): janicejacqueline@icloud.com
+- Lawrence Fasold (40207808): lawrence_fasold@hotmail.com
+- Toby Smith (40165892): tobybsmith121@gmail.com
+
+## Tech Stack
+- NodeJS
+- ExpressJS
+- SvelteJS
+- MySQL
+- TailwindCSS
+- OAuth
