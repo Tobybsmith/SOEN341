@@ -13,3 +13,7 @@
 - TailwindCSS
 - OAuth
 - hello
+
+## Project Description
+Outlined is a job listing platform designed to make job searching easy and accessible.
+Outlined will include a filtered search, tagged posts, and location awareness.
