@@ -22,6 +22,10 @@
         }
         color: green;
     }
+    .pro
+    {
+        color: rgb(125, 75, 25);
+    }
 </style>
 
 <main>
@@ -30,4 +34,5 @@
     </h1>
     <p>It is the first page someone will see when they navigate to our site!</p>
     <p>Click <a href="main">ME</a> to go to the main page!</p>
+    <p>Click <a href="prototyping" class="pro">ME</a> to go to the prototyping page</p>
 </main>

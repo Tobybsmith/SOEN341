@@ -1,0 +1,15 @@
+:root
+{
+    --main-bkg-color: rgb(20,20,20);
+    --main-text-color: rgb(125, 125, 125);
+}
+
+.post_container
+{
+    background-color: var(--main-text-color);
+}
+
+p.post_container
+{
+    color: var(--main-text-color);
+}
