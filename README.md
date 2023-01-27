@@ -12,3 +12,4 @@
 - MySQL
 - TailwindCSS
 - OAuth
+- hello
