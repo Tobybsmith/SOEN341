@@ -8,10 +8,10 @@ General ideas of implementation that will be added towards the website design.
 
 ## Profile
 - Create and edit profile
--- Upload Resume, link personal socials (i.e. LinkedIn), name, age, photo, location
+- - Upload Resume, link personal socials (i.e. LinkedIn), name, age, photo, location
 - Define as company or personal user
--- You have user and poster as seperate profiles
--- Can view posts of companies
+- - You have user and poster as seperate profiles
+- - Can view posts of companies
 
 ## Posts
 - Title 
