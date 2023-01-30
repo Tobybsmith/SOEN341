@@ -27,6 +27,7 @@
 		"sass": "^1.57.1",
 		"svelte": "^3.54.0",
 		"svelte-check": "^3.0.1",
+		"svelte-preprocess": "^5.0.1",
 		"tslib": "^2.4.1",
 		"typescript": "^4.9.3",
 		"vite": "^4.0.0",
@@ -34,7 +35,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"oauth": "^0.10.0",
-		"svelte-preprocess": "^5.0.1"
+		"oauth": "^0.10.0"
 	}
 }

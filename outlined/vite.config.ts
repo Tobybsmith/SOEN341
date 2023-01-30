@@ -5,14 +5,11 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 import { sveltePreprocess } from 'svelte-preprocess/dist/autoProcess';
 
 const config: UserConfig = {
-	plugins: [sveltekit()],
+	plugins: [sveltekit(),
+		  ],
 	test: {
 		include: ['src/**/*.{test,spec}.{js,ts}']
 	}
 };
 
-export default defineConfig({
-    plugins: [svelte({
-        preprocess: sveltePreprocess()
-    })],
-    });
+export default config;

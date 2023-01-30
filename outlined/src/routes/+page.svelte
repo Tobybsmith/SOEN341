@@ -9,22 +9,28 @@
     Order does not matter, since cascading doesn't
     happen with inheritance
 -->
+
 <style lang="scss">
-    h1
+    :root
     {
-        color: blueviolet;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        --corner-curve: 25px;
+        --main-color: #eceff1;
+        --sec-color: #37474f;
+        --main-text: #212121;
+        --main-high: #f9a825;
+
+        background-color: var(--main-color);
+        color: var(--main-text);
     }
     p
     {
+        color: var(--main-text);
         a
         {
-            color: goldenrod;
+            color: var(--main-high);
         }
-        color: green;
-    }
-    .pro
-    {
-        color: rgb(125, 75, 25);
     }
 </style>
 
