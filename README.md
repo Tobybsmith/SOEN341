@@ -17,3 +17,9 @@
 ## Project Description
 Outlined is a job listing platform designed to make job searching easy and accessible.
 Outlined will include a filtered search, tagged posts, and location awareness.
+
+## To Run
+To run the project, run the following commands in the 'outlined' directory:
+- npm -D i
+- npm run dev
+If these commands fail, please ensure you have the most recent version of NPM installed and on your PATH variable.
