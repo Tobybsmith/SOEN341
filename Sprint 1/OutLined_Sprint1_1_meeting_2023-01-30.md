@@ -1,9 +1,9 @@
 # Sprint 1 Meeting
-Date: 2023-01-30
-Ttime: 3:30-4:30
+- Date: 2023-01-30
+- Time: 3:30-4:30
 
 
-##Attendies
+## Attendies
 - William Heron (40123670)
 - Janice Jacqueline (40186311)
 - Lawrence Fasold (40207808)
