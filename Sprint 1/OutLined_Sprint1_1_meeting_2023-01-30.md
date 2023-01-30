@@ -1,4 +1,7 @@
 # Sprint 1 Meeting
+Date: 2023-01-30
+Ttime: 3:30-4:30
+
 
 ##Attendies
 - William Heron (40123670)
