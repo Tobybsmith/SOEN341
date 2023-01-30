@@ -14,9 +14,10 @@
     //Will use either MySQL, MongoDB, or FireBase depending
 </script>
 
-<style lang="scss">
-
+<style type="text/scss">
+    @import "../../styles/global.scss";
 </style>
+ 
 
 <main>
     <h1>
