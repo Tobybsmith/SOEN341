@@ -16,55 +16,77 @@
 </script>
 
 <style lang="scss">
+    :root
+    {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        --corner-curve: 25px;
+        --main-color: #eceff1;
+        --sec-color: #37474f;
+        --main-text: #212121;
+        --main-high: #f9a825;
+    }
     .outer-container
     {
-        background-color: var(--main-high);
-        height: 10rem;
-        width: 20rem;
-        margin: 1rem;
-        border-radius: var(--corner-curve);
-        display: flex;
-        flex-direction: column;
-        padding-left: 2.5rem;
-        padding-top: 0.75rem;
-        border: 0.25rem solid var(--sec-color);
+        width: 25rem;
+        height: 7.5rem;
+        background-color: var(--main-color);
         color: var(--main-text);
-
-        .title
-        {
-            font-size: larger;
-            color: var(--main-color);
-            background-color: var(--main-high);
-            margin-bottom: 2rem;
-        }
-        .content
-        {
-            background-color: var(--main-color);
-        }
-        .description
-        {
-            background-color: var(--main-color);
-        }
-        .apply-button
-        {
-            margin-top: 1rem;
-            width: 7rem;
-            border: none;
-            background-color: var(--main-high);
-            color: var(--main-text);
-        }
-        .apply-button:hover
-        {
-            background-color: var(--main-text);
-            color: var(--main-high);
-        }
+        border: 0.125rem solid var(--sec-color);
+        border-radius: 1rem;
+        margin-block: 1rem;
+    }
+    .title
+    {
+        padding: 0.5rem;
+        background-color: var(--main-high);
+        border-radius: 0.95rem 0.95rem 0 0;
+        color: var(--main-color);
+    }
+    .description
+    {
+        padding-left: 0.5rem;
+        height: 2.75rem;
+        overflow: hidden;
+        white-space: pre-wrap;
+        text-overflow: ellipsis;
+    }
+    .apply-button
+    {
+        border: 0.125rem solid var(--sec-color);
+        color: var(--main-color);
+        background-color: var(--main-high);
+        margin: 0.5rem;
+        height: 1.5rem;
+        width: 3.5rem;
+    }
+    .apply-button:hover
+    {
+        color: var(--main-text);
+        background-color: var(--main-color);
+    }
+    .bottom-row
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 0.5rem;
+    }
+    a
+    {
+        text-decoration: none;
+        color: var(--main-high)
     }
 </style>
 
 <div class="outer-container">
-    <div class="title" id='title-text'>{title}</div>
+    <div class="title">{title}</div>
     <div class="content">
         <div class="description">{description}</div>
-        <button on:click|once={HandleClick} class="apply-button">Apply!</button>
+        <div class="bottom-row">
+            <button on:click|once={HandleClick} class="apply-button">Apply!</button>
+            <a href="#" class="apply-link">Read More...</a>
+        </div>
     </div>
 </div>
