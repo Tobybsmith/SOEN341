@@ -2,31 +2,28 @@
     import axios from 'axios';
     import {push} from 'svelte-spa-router'
 
-    let name = ' ', email = ' ', password = ' '
+    let email = ' ', password = ' '
 
     $:submit = async () => {
-        await axios.post('register', {
-            name,
+        await axios.post('login', {
             email,
             password
-        });
-
-        await push ('/login');
+        }, {withCredentials: true});
+        
+        if(Response.status === 200){
+            axios.defaults.headers.common['Authorization'] = `Bearer ${Response.data.token}`;
+        }
+        await push ('/');
     }
 </script>
 
 <main class="formm-signin">
     <form on:submit={submit}>
-        <h1 class="h3 mb-3 fw-normal">You can register here</h1>
-
-        <div class="form-floating">
-            <input bind:value={name} class="form-control" placeholder="Name">
-            <label><input type='text'>Name</label>
-        </div>
+        <h1 class="h3 mb-3 fw-normal">Sign here!</h1>
 
         <div class="form-floating">
             <input bind:value={email} type="email" class="form-control" placeholder="name@example.com">
-            <label><input type='text'>Email Adress</label>
+            <label><input type='text'> Email Adress</label>
         </div>
 
         <div class="form-floating">
