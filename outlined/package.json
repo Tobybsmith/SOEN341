@@ -35,6 +35,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"oauth": "^0.10.0"
+		"oauth": "^0.10.0",
+		"rollup-plugin-css-only": "^4.3.0"
 	}
 }

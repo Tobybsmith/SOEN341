@@ -14,22 +14,6 @@
     //Will use either MySQL, MongoDB, or FireBase depending
 </script>
 
-<style lang="scss">
-    :root
-    {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-        --corner-curve: 25px;
-        --main-color: #eceff1;
-        --sec-color: #37474f;
-        --main-text: #212121;
-        --main-high: #f9a825;
-
-        background-color: var(--main-color);
-        color: var(--main-text);
-    }
-</style>
- 
 
 <main>
     <h1>
