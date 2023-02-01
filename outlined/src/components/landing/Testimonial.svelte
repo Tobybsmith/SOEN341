@@ -1,18 +1,18 @@
 <script>
-    export let name = "John Smith";
-    export let story = "I Like It!";
-    export let image_ref = "../../office_man.png";
+    export let name = "null_desc";
+    export let story = "null_story";
+    export let image_ref = "null_img";
 </script>
 
 <style lang="scss">
     :root
-{
+    {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --main-color: #eceff1;
     --sec-color: #37474f;
     --main-text: #212121;
     --main-high: #f9a825;
-}
+    }
     main
     {
         height: 25rem;
