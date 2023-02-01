@@ -86,7 +86,7 @@
         <div class="description">{description}</div>
         <div class="bottom-row">
             <button on:click|once={HandleClick} class="apply-button">Apply!</button>
-            <a href="#" class="apply-link">Read More...</a>
+            <a href="." class="apply-link">Read More...</a>
         </div>
     </div>
 </div>
