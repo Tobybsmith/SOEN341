@@ -32,7 +32,7 @@
     </div>
     <div class="testimonial-title font-900 main-col">Listen to our customers!</div>
     <div class="testimonial-container">
-        <Testimonial name="Marty Smith" story='I found a job in only days using Outlined!' image_ref="../../office_man.png"/>
+        <Testimonial name="Marty Evans" story='I found a job in only days using Outlined!' image_ref="../../office_man.png"/>
         <Testimonial name="Vincent Van Gogh" story='Finding a fulfilling career in art was easy with Outlined!' image_ref="../../gogh.jpg"/>
         <Testimonial name="[REDCTED]" story='HELP I AM STUCK IN THE WEBSITE THIS IS NOT A JOKE' image_ref="../../redacted.jpg"/>
     </div>
