@@ -2,28 +2,29 @@
     import axios from 'axios';
     import {push} from 'svelte-spa-router'
 
-    let email = ' ', password = ' '
+    let email = '', password = '';
 
-    $:submit = async () => {
-        await axios.post('login', {
+    $: submit = async () => {
+        const response = await axios.post('login', {
             email,
             password
         }, {withCredentials: true});
-        
-        if(Response.status === 200){
-            axios.defaults.headers.common['Authorization'] = `Bearer ${Response.data.token}`;
+
+        if (response.status === 200) {
+            axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
+
+            await push('/');
         }
-        await push ('/');
     }
 </script>
 
-<main class="formm-signin">
-    <form on:submit={submit}>
-        <h1 class="h3 mb-3 fw-normal">Sign here!</h1>
+<main class="form-signin">
+    <form on:submit|preventDefault={submit}>
+        <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
         <div class="form-floating">
             <input bind:value={email} type="email" class="form-control" placeholder="name@example.com">
-            <label><input type='text'> Email Adress</label>
+            <label><input type='text'>Email address</label>
         </div>
 
         <div class="form-floating">
@@ -31,6 +32,6 @@
             <label><input type='text'>Password</label>
         </div>
 
-        <button class="w-100 btn btn-lg btn primary" type="submit">Submit</button>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
     </form>
 </main>

@@ -2,7 +2,7 @@
     import Login from "./login.svelte";
     import Register from "./register.svelte";
     import Home from "./home.svelte";
-    import Router from "svelte-spa-router";
+    import Router, {link} from "svelte-spa-router";
 
     const routes = {
         '/': Home,
