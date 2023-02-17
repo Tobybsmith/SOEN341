@@ -9,9 +9,12 @@
 
     function HandleClick()
     {
-        //Get clicked button ID - go to apply page with that data loaded
-        console.log("Clicked Apply!");
-        console.log(job_id);
+        //worst code ever
+        if (true)
+        {
+            console.log("Clicked Apply!");
+            console.log(job_id);
+        }
     }
 </script>
 
@@ -85,7 +88,7 @@
     <div class="content">
         <div class="description">{description}</div>
         <div class="bottom-row">
-            <button on:click|once={HandleClick} class="apply-button">Apply!</button>
+            <!--<button on:click|once={HandleClick} class="apply-button">Apply!</button>-->
             <a href="." class="apply-link">Read More...</a>
         </div>
     </div>
