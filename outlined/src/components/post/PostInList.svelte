@@ -54,20 +54,6 @@
         white-space: pre-wrap;
         text-overflow: ellipsis;
     }
-    .apply-button
-    {
-        border: 0.125rem solid var(--sec-color);
-        color: var(--main-color);
-        background-color: var(--main-high);
-        margin: 0.5rem;
-        height: 1.5rem;
-        width: 3.5rem;
-    }
-    .apply-button:hover
-    {
-        color: var(--main-text);
-        background-color: var(--main-color);
-    }
     .bottom-row
     {
         display: flex;
@@ -80,6 +66,7 @@
     {
         text-decoration: none;
         color: var(--main-high);
+        margin-inline: 0.5rem;
     }
 </style>
 
