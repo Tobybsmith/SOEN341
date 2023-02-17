@@ -19,7 +19,7 @@
         [Post, {title: "Sheep", description: "Must Be Good With Farmers", id: 3}],
     ];
 
-    let viewed : [typeof SvelteComponent, Record<string, any>][]= [
+    let shortlisted : [typeof SvelteComponent, Record<string, any>][]= [
         [Post, {title: "Sitcom Extra",  description: "Must have white teeth", id:7}],
         [Post, {title: "Technical Writer", description: "4 Years experience required, more wanted", id: 31}],
         [Post, {title: "Human Test Subject", description: "Looking for a [REDACTED] to participate in [REDACTED]", id: 11}],
@@ -31,6 +31,7 @@
 <main>
     <img src={user_photo_ref} alt="User's Profile" class="user-photo left one-rem-il one-rem-bl">
     <div class="text-container">
+        <!--Utility Class moment lmao-->
         <div class="username left one-rem-il one-rem-bl"><span class="big">Username: </span>{username}</div>
         <div class="user-desc left one-rem-il one-rem-bl"><span class="big">User Bio: </span>{user_desc}</div>
         <div class="user-location left one-rem-il one-rem-bl"><span class="big">User Location: </span>{user_location}</div>
@@ -44,8 +45,8 @@
             {/each}
         </div>
         <div class="viewed one-rem-il">
-            <p class="big">Previously Viewed Posts</p>
-            {#each viewed as [listing, props]}
+            <p class="big">Short-Listed Posts:</p>
+            {#each shortlisted as [listing, props]}
                 <svelte:component this={listing} {...props} />
             {/each}
         </div>

@@ -79,7 +79,7 @@
     a
     {
         text-decoration: none;
-        color: var(--main-high)
+        color: var(--main-high);
     }
 </style>
 
