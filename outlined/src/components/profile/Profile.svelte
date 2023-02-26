@@ -41,7 +41,7 @@
         <div class="user-desc left one-rem-il one-rem-bl">
             <span class="big">User Bio: </span>
             <!--Two way binding, user_desc will change as the user updates the form!-->
-            <!--The save button isn't needed at all, but this is called User Experience-->
+            <!--The save button isn't needed at all, but this is called User Experience ;)-->
             <input type="text" name="user-bio" class="user-bio" bind:value={user_desc}>
             <button on:click={button_func}>Save</button>
         </div>
