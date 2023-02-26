@@ -51,7 +51,6 @@
             <li>
                <svelte:component this={post} {...props}/>
             </li>
-            
         {/each}
     </ul>
 
