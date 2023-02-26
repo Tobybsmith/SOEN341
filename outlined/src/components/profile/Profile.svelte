@@ -29,6 +29,14 @@
     {
         console.log("Saved Description: " + user_desc);
     }
+    function see_more_hist()
+    {
+        console.log("See more");
+    }
+    function see_more_list()
+    {
+        console.log("Also see more");
+    }
 </script>
 
 <body>
@@ -54,12 +62,14 @@
             {#each applied_to as [listing, props]}
                 <svelte:component this={listing} {...props} />
             {/each}
+            <button on:click={see_more_hist} class="see-more">See More</button>
         </div>
         <div class="viewed one-rem-il">
             <p class="big">Short-Listed Posts:</p>
             {#each shortlisted as [listing, props]}
                 <svelte:component this={listing} {...props} />
             {/each}
+            <button on:click={see_more_list} class="see-more">See More</button>
         </div>
     </div>
     </main>
@@ -71,6 +81,7 @@
     {
         border: 0.25rem solid #37474f;
         border-radius: 25px;
+        color: #37474f;
     }
     main
     {
@@ -154,10 +165,22 @@
         border-radius: 25px;
         color: #eceff1;
         background-color: #f9a825;
+        position: relative;
+        transition-duration: 0.4s;
     }
     button:hover
     {
         color: #37474f;
         background-color: #eceff1;
+    }
+    button:active
+    {
+        background-color: #f9a825;
+        transition-duration: 0;
+
+    }
+    .see-more
+    {
+        width: 6rem;
     }
 </style>

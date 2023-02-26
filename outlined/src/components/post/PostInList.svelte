@@ -12,6 +12,7 @@
         //worst code ever
         if (true)
         {
+            //goto job ID
             console.log("Clicked Apply!");
             console.log(job_id);
         }
@@ -62,11 +63,29 @@
         align-items: center;
         padding-right: 0.5rem;
     }
-    a
+    button
     {
-        text-decoration: none;
-        color: var(--main-high);
-        margin-inline: 0.5rem;
+        height: 2rem;
+        width: 8rem;
+        font-size: 1rem;
+        margin-left: 0.5rem;
+        border: 0.125rem solid #37474f;
+        border-radius: 25px;
+        color: #eceff1;
+        background-color: #f9a825;
+        position: relative;
+        transition-duration: 0.4s;
+    }
+    button:hover
+    {
+        color: #37474f;
+        background-color: #eceff1;
+    }
+    button:active
+    {
+        background-color: #f9a825;
+        transition-duration: 0;
+
     }
 </style>
 
@@ -75,8 +94,8 @@
     <div class="content">
         <div class="description">{description}</div>
         <div class="bottom-row">
-            <!--<button on:click|once={HandleClick} class="apply-button">Apply!</button>-->
-            <a href="." class="apply-link">Read More...</a>
+            <button on:click|once={HandleClick} class="apply-button">Read More...</button>
+            <!--<a href="." class="apply-link">Read More...</a>-->
         </div>
     </div>
 </div>
