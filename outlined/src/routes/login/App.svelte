@@ -1,6 +1,6 @@
 <script>
-    import Login from "./login.svelte";
-    import Register from "./register.svelte";
+    import Login from "./+page.svelte";
+    import Register from "../register/+page.svelte";
     import Home from "./home.svelte";
     import Router, {link} from "svelte-spa-router";
 
