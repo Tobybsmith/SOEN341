@@ -36,6 +36,7 @@
 	"type": "module",
 	"dependencies": {
 		"oauth": "^0.10.0",
-		"rollup-plugin-css-only": "^4.3.0"
+		"rollup-plugin-css-only": "^4.3.0",
+		"svelte-routing": "^1.6.0"
 	}
 }

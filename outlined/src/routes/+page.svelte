@@ -2,6 +2,7 @@
     import "../styles/landing.css"
     import { goto } from '$app/navigation';
     import Testimonial from "../components/landing/Testimonial.svelte"
+    import { Link } from 'svelte-routing';
 
     function HandleLoginClick()
     {
