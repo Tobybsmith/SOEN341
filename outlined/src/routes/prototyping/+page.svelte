@@ -1,6 +1,8 @@
 <script>
     import { each } from 'svelte/internal';
 
+    import ExpandedPost from '../../components/post/expanded-post.svelte';
+
     //This will come from a database eventually
     let job_titles = ["ACME Trap Designer", "Microbrewer", "Macrobrewer"]
     let job_descs = ["Senior trap designer needed. Coyote experience required. Explosives knowledge preferred", 
@@ -21,11 +23,6 @@
     </h1>
 
     <div class="post_container">
-        <!--
-            {#each job_titles as title, index}
-            <Post title={title} description={job_descs[index]} job_id={index}/>
-            {/each}
-        -->
-        <Profile username="tibsmith" display_name="Tobias Smith" user_photo_ref="../../../office_man.png" user_id={userid} user_desc="Just a chill dude, cool like that you know?" user_location="Montreal, QC" user_resume_ref="null"/>
+       <ExpandedPost poster="Matrox" description="Just a chill dude fr, like just a guy u know that can totally be gamed with.  " title="ASIC/FPGA Validation Intern" date="10/02/2022"/>
     </div>
 </main>

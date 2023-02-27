@@ -1,5 +1,6 @@
 <script>
     import "../styles/landing.css"
+    import "../styles/global.css"
     import { goto } from '$app/navigation';
     import Testimonial from "../components/landing/Testimonial.svelte"
 

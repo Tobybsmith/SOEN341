@@ -3,6 +3,9 @@
 -->
 
 <script>
+    import { goto } from "$app/navigation";
+
+
     export let title = "null"
     export let description = "null"
     export let job_id = -1
@@ -29,6 +32,7 @@
         --sec-color: #37474f;
         --main-text: #212121;
         --main-high: #f9a825;
+        background-color: var(--main-color);
     }
     .outer-container
     {
@@ -38,7 +42,7 @@
         color: var(--main-text);
         border: 0.125rem solid var(--sec-color);
         border-radius: 1rem;
-        margin-block: 1rem;
+        margin-bottom: 1rem;
     }
     .title
     {
@@ -74,7 +78,6 @@
         color: #eceff1;
         background-color: #f9a825;
         position: relative;
-        transition-duration: 0.4s;
     }
     button:hover
     {

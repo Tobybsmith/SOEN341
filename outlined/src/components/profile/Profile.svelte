@@ -1,5 +1,6 @@
 <script lang="ts">
     import Post from "../post/PostInList.svelte"
+    
     import type {SvelteComponent, SvelteComponentTyped} from 'svelte';
     //All this will be filled in with a database query by the app when the user logs in
     export let username = "null";
@@ -74,7 +75,6 @@
     </div>
     </main>
 </body>
-
 
 <style lang="scss">
     body
@@ -166,7 +166,6 @@
         color: #eceff1;
         background-color: #f9a825;
         position: relative;
-        transition-duration: 0.4s;
     }
     button:hover
     {
