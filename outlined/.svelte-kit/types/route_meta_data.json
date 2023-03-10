@@ -1,6 +1,9 @@
 {
-	"/": [],
+	"/": [
+		"src/routes/+page.server.ts"
+	],
 	"/main": [],
 	"/profile": [],
+	"/proto_db": [],
 	"/prototyping": []
 }

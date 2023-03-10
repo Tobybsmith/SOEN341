@@ -1,13 +1,15 @@
-<script>
+<script lang="ts">
     import "../styles/landing.css"
     import { goto } from '$app/navigation';
     import Testimonial from "../components/landing/Testimonial.svelte"
-
+    
     function HandleLoginClick()
     {
         goto("/login");
     }
 </script>
+
+
 
 <main>
     <div class="hero"> 
