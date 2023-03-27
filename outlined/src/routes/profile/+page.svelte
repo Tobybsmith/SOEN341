@@ -1,12 +1,26 @@
 <script lang="ts">
+    // import { SystemDrive } from "$env/static/private";
+
+    export let data; //ADDED for DB
+
     import Profile from "../../components/profile/Profile.svelte"
     //Need to get user stuff from a database, but this will be hard-coded for now
-    const img = "../../../gogh.jpg";
-    const username = "vinnyG";
-    const display_name = "Vincent Van Gogh";
-    const user_id = 69;
-    const description = "🖌️ I love painting and cutting my own ear off";
-    const location = "The Hague, Netherlands"
+    
+    // const img = "../../../gogh.jpg";
+    // const username = "vinnyG";
+    // const display_name = "Vincent Van Gogh";
+    // const user_id = 69;
+    // const description = "🖌️ I love painting and cutting my own ear off";
+    // const location = "The Hague, Netherlands";
+
+    const img = data.user_data.db_img;
+    const username = data.user_data.db_username;
+    const display_name = data.user_data.db_display_name;
+    const user_id = data.user_data.db_user_id;
+    const description = data.user_data.db_description;
+    const location = data.user_data.db_location;
+
+
 </script>
 
 <body>

@@ -1,6 +1,8 @@
 {
 	"/": [],
 	"/main": [],
-	"/profile": [],
+	"/profile": [
+		"src/routes/profile/+page.js"
+	],
 	"/prototyping": []
 }
