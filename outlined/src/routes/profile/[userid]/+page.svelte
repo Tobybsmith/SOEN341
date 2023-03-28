@@ -3,19 +3,20 @@
     /** @type {import('./$types').PageData} */
     
 
-    import Profile from "../../components/profile/Profile.svelte"
+    import Profile from "../../../components/profile/Profile.svelte"
     //Need to get user stuff from a database, but this will be hard-coded for now
     
     
     export let data; //ADDED for DB
-    const users = data.users
+    // const users = data.users
+    const { user } = data
 
-    const img = "../../gogh.jpg";
-    const username = "vinnyG";
-    const display_name = "Vincent Van Gogh";
-    const user_id = 69;
-    const description = "🖌️ I love painting and cutting my own ear off";
-    const location = "The Hague, Netherlands";
+    const img = user.image;
+    const username = user.firstName + " " + user.lastName;
+    const display_name = user.firstName;
+    const user_id = user.id;
+    const description = user.company.title;
+    const location = user.address.city;
 
     // const img = users(image);
     // const username = data.user_data.db_username;

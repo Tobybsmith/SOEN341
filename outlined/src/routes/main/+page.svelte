@@ -13,7 +13,13 @@
         [Post, {title: "Wizard", description: "Must be able to carve runes at a journeyman level. Must be able to cast Fireball.", id: 1}],
         [Post, {title: "Farmer", description: "Must Be Good With Sheep", id: 2}],
         [Post, {title: "Sheep", description: "Must Be Good With Farmers", id: 3}],
-    ]; 
+    ];
+
+    export let data; //ADDED for DB
+
+
+    
+
 
     function GotoProfile()
     {
