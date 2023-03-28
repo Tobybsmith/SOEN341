@@ -1,5 +1,9 @@
 {
 	"/": [],
+	"/login": [],
+	"/main": [],
+	"/prototyping": [],
+	"/register": []
 	"/main": [
 		"src/routes/main/+page.js"
 	],

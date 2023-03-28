@@ -15,9 +15,9 @@
     }
 </script>
 
-<main class="formm-signin">
-    <form on:submit={submit}>
-        <h1 class="h3 mb-3 fw-normal">You can register here</h1>
+<main class="form-signin">
+    <form on:submit|preventDefault={submit}>
+        <h1 class="h3 mb-3 fw-normal">Please register</h1>
 
         <div class="form-floating">
             <input bind:value={name} class="form-control" placeholder="Name">
@@ -26,7 +26,7 @@
 
         <div class="form-floating">
             <input bind:value={email} type="email" class="form-control" placeholder="name@example.com">
-            <label><input type='text'>Email Adress</label>
+            <label><input type='text'>Email address</label>
         </div>
 
         <div class="form-floating">
@@ -34,6 +34,6 @@
             <label><input type='text'>Password</label>
         </div>
 
-        <button class="w-100 btn btn-lg btn primary" type="submit">Submit</button>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
     </form>
 </main>
