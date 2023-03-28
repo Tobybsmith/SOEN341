@@ -11,6 +11,8 @@ type OptionalUnion<U extends Record<string, any>, A extends keyof U = U extends 
 type PageParentData = EnsureDefined<LayoutData>;
 type LayoutRouteId = RouteId | "/" | "/login" | "/main" | "/prototyping" | "/register" | null
 type LayoutParams = RouteParams & {  }
+type LayoutRouteId = RouteId | "/" | "/main" | "/main/[userid]" | "/profile" | "/profile/[userid]" | "/prototyping" | null
+type LayoutParams = RouteParams & { userid?: string }
 type LayoutParentData = EnsureDefined<{}>;
 
 export type PageServerData = null;

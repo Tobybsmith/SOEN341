@@ -3,6 +3,9 @@
 -->
 
 <script>
+    import { goto } from "$app/navigation";
+
+
     export let title = "null"
     export let description = "null"
     export let job_id = -1
@@ -12,6 +15,7 @@
         //worst code ever
         if (true)
         {
+            //goto job ID
             console.log("Clicked Apply!");
             console.log(job_id);
         }
@@ -28,6 +32,7 @@
         --sec-color: #37474f;
         --main-text: #212121;
         --main-high: #f9a825;
+        background-color: var(--main-color);
     }
     .outer-container
     {
@@ -37,7 +42,7 @@
         color: var(--main-text);
         border: 0.125rem solid var(--sec-color);
         border-radius: 1rem;
-        margin-block: 1rem;
+        margin-bottom: 1rem;
     }
     .title
     {
@@ -54,20 +59,6 @@
         white-space: pre-wrap;
         text-overflow: ellipsis;
     }
-    .apply-button
-    {
-        border: 0.125rem solid var(--sec-color);
-        color: var(--main-color);
-        background-color: var(--main-high);
-        margin: 0.5rem;
-        height: 1.5rem;
-        width: 3.5rem;
-    }
-    .apply-button:hover
-    {
-        color: var(--main-text);
-        background-color: var(--main-color);
-    }
     .bottom-row
     {
         display: flex;
@@ -76,10 +67,28 @@
         align-items: center;
         padding-right: 0.5rem;
     }
-    a
+    button
     {
-        text-decoration: none;
-        color: var(--main-high);
+        height: 2rem;
+        width: 8rem;
+        font-size: 1rem;
+        margin-left: 0.5rem;
+        border: 0.125rem solid #37474f;
+        border-radius: 25px;
+        color: #eceff1;
+        background-color: #f9a825;
+        position: relative;
+    }
+    button:hover
+    {
+        color: #37474f;
+        background-color: #eceff1;
+    }
+    button:active
+    {
+        background-color: #f9a825;
+        transition-duration: 0;
+
     }
 </style>
 
@@ -88,8 +97,8 @@
     <div class="content">
         <div class="description">{description}</div>
         <div class="bottom-row">
-            <!--<button on:click|once={HandleClick} class="apply-button">Apply!</button>-->
-            <a href="." class="apply-link">Read More...</a>
+            <button on:click|once={HandleClick} class="apply-button">Read More...</button>
+            <!--<a href="." class="apply-link">Read More...</a>-->
         </div>
     </div>
 </div>

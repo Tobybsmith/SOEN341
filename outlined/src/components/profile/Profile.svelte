@@ -1,5 +1,6 @@
 <script lang="ts">
     import Post from "../post/PostInList.svelte"
+    
     import type {SvelteComponent, SvelteComponentTyped} from 'svelte';
     //All this will be filled in with a database query by the app when the user logs in
     export let username = "null";
@@ -11,29 +12,48 @@
     export let user_resume_ref = "null";
     
     //All this needs to be filled in from a database
-    //We need like 10 maybe
-    let applied_to : [typeof SvelteComponent, Record<string, any>][]= [
+    export let applied_to : [typeof SvelteComponent, Record<string, any>][]= [
         [Post, {title: "Svelte Engineer",  description: "Does Stuff fr :)", id:0}],
         [Post, {title: "Textbook Author", description: "W", id: 1}],
         [Post, {title: "Farmer", description: "Must Be Good With Sheep", id: 2}],
         [Post, {title: "Sheep", description: "Must Be Good With Farmers", id: 3}],
     ];
 
-    let shortlisted : [typeof SvelteComponent, Record<string, any>][]= [
+    export let shortlisted : [typeof SvelteComponent, Record<string, any>][]= [
         [Post, {title: "Sitcom Extra",  description: "Must have white teeth", id:7}],
         [Post, {title: "Technical Writer", description: "4 Years experience required, more wanted", id: 31}],
         [Post, {title: "Human Test Subject", description: "Looking for a [REDACTED] to participate in [REDACTED]", id: 11}],
         [Post, {title: "Micro-Brewer", description: "Must be less than 6 inches tall. 5 years experience required.", id: 19}],
     ];
+
+    function button_func()
+    {
+        console.log("Saved Description: " + user_desc);
+    }
+    function see_more_hist()
+    {
+        console.log("See more");
+    }
+    function see_more_list()
+    {
+        console.log("Also see more");
+    }
 </script>
 
-<div class="display-name wide bigger">{display_name}'s Profile</div>
-<main>
+<body>
+    <div class="display-name wide bigger top-curve">{display_name}'s Profile</div>
+    <main>
     <img src={user_photo_ref} alt="User's Profile" class="user-photo left one-rem-il one-rem-bl">
     <div class="text-container">
         <!--Utility Class moment lmao-->
         <div class="username left one-rem-il one-rem-bl"><span class="big">Username: </span>{username}</div>
-        <div class="user-desc left one-rem-il one-rem-bl"><span class="big">User Bio: </span>{user_desc}</div>
+        <div class="user-desc left one-rem-il one-rem-bl">
+            <span class="big">User Bio: </span>
+            <!--Two way binding, user_desc will change as the user updates the form!-->
+            <!--The save button isn't needed at all, but this is called User Experience ;)-->
+            <input type="text" name="user-bio" class="user-bio" bind:value={user_desc}>
+            <button on:click={button_func}>Save</button>
+        </div>
         <div class="user-location left one-rem-il one-rem-bl"><span class="big">User Location: </span>{user_location}</div>
         <div class="user-resume left one-rem-il one-rem-bl"><span class="big">User Resume: </span>{user_resume_ref}</div>
     </div>
@@ -43,26 +63,34 @@
             {#each applied_to as [listing, props]}
                 <svelte:component this={listing} {...props} />
             {/each}
+            <button on:click={see_more_hist} class="see-more">See More</button>
         </div>
         <div class="viewed one-rem-il">
             <p class="big">Short-Listed Posts:</p>
             {#each shortlisted as [listing, props]}
                 <svelte:component this={listing} {...props} />
             {/each}
+            <button on:click={see_more_list} class="see-more">See More</button>
         </div>
     </div>
-</main>
+    </main>
+</body>
 
 <style lang="scss">
+    body
+    {
+        border: 0.25rem solid #37474f;
+        border-radius: 25px;
+        color: #37474f;
+    }
     main
     {
-        border: 1px solid lime;
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
         background-color: var(--main-col);
         width: auto;
-        margin: auto;
+        margin: 0;
     }
     img
     {
@@ -71,6 +99,11 @@
         background-color: var(--main-high);
         grid-column: 1/2;
         grid-row: 1/2;
+        border: 0.25rem solid #37474f;
+    }
+    a:hover
+    {
+        color: #37474f;
     }
     .text-container
     {
@@ -92,14 +125,6 @@
         font-size: larger;
         font-weight: 600;
     }
-    .left
-    {
-        
-    }
-    .right
-    {
-        
-    }
     .bigger
     {
         font-size: x-large;
@@ -115,11 +140,46 @@
     }
     .hist
     {
-        border: 1px solid red;
         display: flex;
         flex-direction: row;
-        grid-row: 0/2;
+        grid-row: 1/2;
         grid-column: 2/2;
+        align-self: end;
     }
+    .top-curve
+    {
+        border-radius: 21px 21px 0 0;
+    }
+    .user-bio
+    {
+        width: 25rem;
+        height: 1.5rem;
+        font-size: 1rem;
+    }
+    button
+    {
+        height: 2rem;
+        width: 4rem;
+        font-size: 1rem;
+        border: 0.125rem solid #37474f;
+        border-radius: 25px;
+        color: #eceff1;
+        background-color: #f9a825;
+        position: relative;
+    }
+    button:hover
+    {
+        color: #37474f;
+        background-color: #eceff1;
+    }
+    button:active
+    {
+        background-color: #f9a825;
+        transition-duration: 0;
 
+    }
+    .see-more
+    {
+        width: 6rem;
+    }
 </style>
