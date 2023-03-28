@@ -18,6 +18,10 @@
             await push('/');
         }
     }
+    function GoToProfile()
+    {
+        goto("/profile");
+    }
 </script>
 
 <main class="form-signin">
@@ -30,7 +34,7 @@
         <div class="form-floating">
             <input bind:value={password} type="password" class="form-control" placeholder="Password">
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Submit</button>
-        <button class="w-100 btn btn-lg btn-primary" type="register">Register</button>
+        <button class="w-100 btn btn-lg btn-primary" type="submit" on:click|preventDefault={GoToProfile}>Submit</button>
+        <button class="w-100 btn btn-lg btn-primary" type="register" on:click|preventDefault={GoToProfile}>Register</button>
     </form>
 </main>
