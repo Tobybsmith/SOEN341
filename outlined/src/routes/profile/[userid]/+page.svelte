@@ -18,13 +18,6 @@
     const description = user.company.title;
     const location = user.address.city;
 
-    // const img = users(image);
-    // const username = data.user_data.db_username;
-    // const display_name = data.user_data.db_display_name;
-    // const user_id = data.user_data.db_user_id;
-    // const description = data.user_data.db_description;
-    // const location = data.user_data.db_location;
-
 
 </script>
 

@@ -3,8 +3,8 @@
 	"/main": [
 		"src/routes/main/+page.js"
 	],
-	"/main/[userid]": [
-		"src/routes/main/[userid]/+page.js"
+	"/main/[jobid]": [
+		"src/routes/main/[jobid]/+page.js"
 	],
 	"/profile": [
 		"src/routes/profile/+page.js"

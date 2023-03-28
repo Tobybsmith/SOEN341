@@ -8,17 +8,25 @@
     import Post from '../../components/post/PostInList.svelte'
     import { listen } from 'svelte/internal';
     
-    export let posts : [typeof SvelteComponent, Record<string, any>][] =[
-        [Post, {title: "Svelte Engineer",  description: "Does Stuff fr :)", id:0}],
-        [Post, {title: "Wizard", description: "Must be able to carve runes at a journeyman level. Must be able to cast Fireball.", id: 1}],
-        [Post, {title: "Farmer", description: "Must Be Good With Sheep", id: 2}],
-        [Post, {title: "Sheep", description: "Must Be Good With Farmers", id: 3}],
-    ];
 
-    export let data; //ADDED for DB
+    // export let posts : [typeof SvelteComponent, Record<string, any>][] = [
+    //     [Post, {title: "Svelte Engineer",  description: "Does Stuff fr :)", id:0}],
+    //     [Post, {title: "Wizard", description: "Must be able to carve runes at a journeyman level. Must be able to cast Fireball.", id: 1}],
+    //     [Post, {title: "Farmer", description: "Must Be Good With Sheep", id: 2}],
+    //     [Post, {title: "Sheep", description: "Must Be Good With Farmers", id: 3}],
+    // ];
 
+    export let data;
+    const { jobs } = data;
+    let posty : [typeof SvelteComponent, Record<string, any>][] = [];
+    for(let i=0; i<jobs.length; i++){
+        console.log(jobs[i].todo);
+        let temp_post = [Post, {title: jobs[i].todo, description: jobs[i].completed, id: jobs[i].id}];
+        posty.push(temp_post);
+    }
+    export let posts = posty;
+    // export let jobs : [typeof SvelteComponent, Record<string, any>][] = data;
 
-    
 
 
     function GotoProfile()
@@ -118,6 +126,14 @@
                     <svelte:component this={post} {...props}/>
                 {/each}
             </div>
+
+            <!-- <div class="job-container">
+                {#each jobs as job}
+                <h2>{job.todo}</h2>
+                {/each}
+            </div> -->
+
+
             <span class="expanded-post">
                 <ExpandedPost poster="Outlined Inc." description=
                 "               We are looking for a specialized developer with expertise in the Svelte language. Responsibilities will range from development to the implementation of digital products while staying at the forefront of technology. As part of the Technology and Development team, led by one of the co-founders of a renowned digital agency in Quebec, the Front-End developer will participate in the development of our exclusive multi-site approach with a fully customized interface, contribute to the creation and development of our product and work on various other projects. Come join a creative and dynamic team within a well-established company with numerous opportunities for advancement!
@@ -154,5 +170,11 @@
                     title="Svelte Engineer" date="10/02/2022"/>
             </span>
         </div>
+        
+
+
     </main> 
+
+
+
 </body>

@@ -3,12 +3,12 @@
 export const load = async({ fetch, params }) => {
 
 
-    const userRes = await fetch('https://dummyjson.com/users?limit=10')
-    const userData = await userRes.json()
-    const users = userData.users
+    const res = await fetch('https://dummyjson.com/todo')
+    const data = await res.json()
+    const job = data.todos
 
 return{
-    users: users
+    jobs: job
 
     // users: {
     //     db_img: "../../../gogh.jpg",
