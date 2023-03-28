@@ -15,7 +15,7 @@
 
     $: logout = async () => {
         await axios.post('logout', {}, {withCredentials: true} );
-        axios.defaults.headers.common['Authorization'] = ` `;
+        axios.defaults.headers.common['Authorization'] = '' ;
 
         await push('\login')
     }
