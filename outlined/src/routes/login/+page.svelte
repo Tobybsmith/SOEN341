@@ -1,4 +1,6 @@
 <script>
+    import { goto } from '$app/navigation';
+
 // @ts-nocheck
 
     import axios from 'axios';
@@ -22,6 +24,11 @@
     {
         goto("/profile");
     }
+
+    function GoToRegister(){
+        goto("/register");
+    }
+
 </script>
 
 <main class="form-signin">
@@ -34,7 +41,7 @@
         <div class="form-floating">
             <input bind:value={password} type="password" class="form-control" placeholder="Password">
         </div>
-        <button class="w-100 btn btn-lg btn-primary" type="submit" on:click|preventDefault={GoToProfile}>Submit</button>
-        <button class="w-100 btn btn-lg btn-primary" type="register" on:click|preventDefault={GoToProfile}>Register</button>
+        <button class="btn" type="submit" on:click|preventDefault={GoToProfile}>Submit</button>
+        <button class="btn" on:click|preventDefault={GoToProfile}>Register</button>
     </form>
 </main>
