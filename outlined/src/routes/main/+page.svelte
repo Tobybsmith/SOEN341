@@ -1,5 +1,4 @@
 <script lang="ts">
-    import Search from "../../components/misc/Search.svelte"
     import ExpandedPost from "../../components/post/expanded-post.svelte";
 
     import type {SvelteComponent, SvelteComponentTyped} from 'svelte';
@@ -7,6 +6,8 @@
 
     import Post from '../../components/post/PostInList.svelte'
     import { listen } from 'svelte/internal';
+
+    import Notify from "../../components/misc/Notify.svelte"
     
 
     // export let posts : [typeof SvelteComponent, Record<string, any>][] = [
@@ -19,20 +20,159 @@
     export let data;
     const { jobs } = data;
     let posty : [typeof SvelteComponent, Record<string, any>][] = [];
+    let f_posty : [typeof SvelteComponent, Record<string, any>][] = [];
     for(let i=0; i<jobs.length; i++){
         console.log(jobs[i].todo);
-        let temp_post = [Post, {title: jobs[i].todo, description: jobs[i].completed, id: jobs[i].id}];
+        //tag all the jobs
+        let temp_post = [Post, 
+        {title: jobs[i].todo, 
+        description: jobs[i].completed, 
+        id: jobs[i].id, 
+        fr: (jobs[i].id % 2 == 0), 
+        en: (jobs[i].id % 2 == 1), 
+        sal: (i * 10) / 2, 
+        bi: (jobs[i].id % 3 == 0),
+        customer: (jobs[i].id % 4 == 0),
+        contract: (jobs[i].id % 5 == 0),
+        degree: (jobs[i].id % 6 == 0)}];
         posty.push(temp_post);
     }
-    export let posts = posty;
+       
     // export let jobs : [typeof SvelteComponent, Record<string, any>][] = data;
-
-
 
     function GotoProfile()
     {
         goto("/profile");
     }
+
+    import { construct_svelte_component } from "svelte/internal";
+
+    export let search_query = "";
+    export let value = 40;
+    export let en = true;
+    export let fr = true;
+    export let bi = true;
+    export let contract = true;
+    export let customer = true;
+    export let degree = true;
+    let boot = false;
+
+    function Clear()
+    {
+       search_query = "";
+    }
+
+    export let posts = f_posty;
+
+    function Search()
+    {
+        f_posty = [];
+        for (let i = 0; i < posty.length; i++)
+        {
+            if (Empty() || posty[i][1].title === "")
+            {
+                if (((RMatch(posty[i][1].title) && SMatch(posty[i][1].sal)) || !boot))
+                {
+                    //success, include it 
+                    f_posty.push(posty[i]);
+                }
+            }
+            else
+            {
+                if ((RMatch(posty[i][1].title) && BMatch(posty[i][1])) && SMatch(posty[i][1].sal) || !boot)
+                {
+                
+                    //success, include it 
+                    f_posty.push(posty[i]);
+                }
+            }
+        }
+        if (!boot)
+        {
+            boot = true;
+        
+        }
+
+        //Need to catch case where none of the things are selected but it should show the whole thing
+        if (f_posty.length === 0)
+        {
+            //f_posty = posty;
+        }
+
+        posts = f_posty;
+        console.log(f_posty);
+    }
+
+    function Empty()
+    {
+        if (bi == false && en == false && fr == false && customer == false && contract == false && degree == false)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    function SMatch(i)
+    {
+        //I is greater or equal to value
+        return i >= value;
+    }
+
+    function RMatch(str)
+    {
+        let p = new RegExp(search_query);
+        if (str.match(p))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    //as long as one matches, then the profile is a match
+    function BMatch(arr)
+    {
+        if (arr.en === true && arr.en == en)
+        {
+            return true;
+        }
+        if (arr.fr === true && arr.fr == fr)
+        {
+            return true;
+        }
+        if (arr.bi === true && arr.bi == bi)
+        {
+            return true;
+        }
+        if (arr.contract === true && arr.contract == contract)
+        {
+            return true;
+        }
+        if (arr.degree === true && arr.degree == degree)
+        {
+            return true;
+        }
+        if (arr.customer === true && arr.customer == customer)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    function ResetSearch()
+    {
+        en = false;
+        fr = false;
+        bi = false;
+        customer = false;
+        contract = false;
+        degree = false;
+    }
+
+    //not janky i swear!
+    Search();
+    ResetSearch();
+
+    
 </script>
 
 <style lang="scss">
@@ -50,10 +190,6 @@
     {
         margin: 0;
         overflow-x: hidden;
-    }
-    ul
-    {
-        list-style-type: none;
     }
     .outer-container
     {
@@ -104,7 +240,81 @@
     }
     .expanded-post
     {
-        margin: auto;
+        margin: 0;
+    }
+
+    input
+    {
+        margin-top: 0;
+        border: none;
+        background-color: #eceff1;
+        border-radius: 1rem;
+    }
+    input:focus
+    {
+        outline: none;
+    }
+    .bar-container
+    {
+        background-color: #eceff1;
+        padding: 0;
+        margin-bottom: 2rem;
+        border: 0.125rem solid #212121;
+        border-radius: 1rem;
+        padding-left: 0.35rem;
+        padding-bottom: 0.1rem;
+    }
+    .search-button
+    {
+        margin-top: 0;
+        border: 0.125rem solid #37474f;
+        width: 8rem;
+        height: 1.5rem;
+        background-color: #eceff1;
+    }
+    .search-button:hover
+    {
+        background-color: #f9a825;
+        color: #eceff1;
+    }
+    .search-button:active
+    {
+        background-color: #eceff1;
+        color: #f9a825;
+    }
+    .salary-slider
+    {
+        margin-bottom: 2rem;
+    }
+    .check-container
+    {
+        margin-bottom: 2rem;
+    }
+    .clear
+    {
+        border: none;
+        background-color: #eceff1;
+    }
+    .clear:hover
+    {
+        background-color: #f9a825;
+        color: #eceff1;
+    }
+    .clear:active
+    {
+        background-color: #eceff1
+    }
+    .search-bar
+    {
+        width: 10rem;
+    }
+    input[type="checkbox"]
+    {
+        accent-color: #f9a825;
+    }
+    input[type="range"]
+    {
+        accent-color: #f9a825;
     }
 </style>
 <body>
@@ -119,12 +329,46 @@
         </div>
         <div class="outer-container">
             <div class="search-container">
-                <Search/>
+                <div class="main-container">
+                    <div>Search by keyword</div>
+                    <div class="bar-container">
+                        <!--Two way binding is so sexy omg-->
+                        <input type="text" name="searchbar" id="searchbar" class="search-bar" bind:value={search_query}>
+                        <button class="clear" on:click={Clear}>X</button>
+                    </div>
+                    <div class="salary-slider">
+                        <div>Minimum salary: ${value}k</div>
+                        <input type="range" min="40" max="160" step="10" bind:value>
+                    </div>
+                    <div class="check-container">
+                        <!--Tag system, 6 tags: English Only, French Only, Customer Facing, Degree Required, Freelance/Contract Work, Bilingual-->
+                        <input type="checkbox" name="en" id="en" bind:checked={en}>
+                        <label for="en">English Only</label><br>
+                        <input type="checkbox" name="fr" id="fr" bind:checked={fr}>
+                        <label for="fr">French Only</label><br>
+                        <input type="checkbox" name="bi" id="bi" bind:checked={bi}>
+                        <label for="bi">Biligual Required</label><br>
+                        <input type="checkbox" name="customer" id="customer" bind:checked={customer}>
+                        <label for="customer">Customer Facing</label><br>
+                        <input type="checkbox" name="degree" id="degree" bind:checked={degree}>
+                        <label for="degree">Degree Required</label><br>
+                        <input type="checkbox" name="contract" id="contract" bind:checked={contract}>
+                        <label for="contract">Freelance/Contract Work</label><br>
+                    </div>
+                    <div>
+                        <button class="search-button" on:click={Search}>Search 🔍</button>
+                    </div>
+                </div>
             </div>
             <div class="post-container">
-                {#each posts as [post, props]}
-                    <svelte:component this={post} {...props}/>
-                {/each}
+                {#if f_posty.length !== 0}
+                    {#each posts as [post, props]}
+                        <svelte:component this={post} {...props}/>
+                    {/each}
+                {:else}
+                        <Notify message="No Items matched search filters."/>
+                {/if}
+                
             </div>
 
             <!-- <div class="job-container">
