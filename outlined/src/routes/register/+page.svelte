@@ -26,7 +26,7 @@
 <main class="root">
     <div class="nav-bar">
         <span class="title">
-            <svg class="name-svg" width="400" height="125" viewBox="0 0 400 125" xmlns="http://www.w3.org/2000/svg">
+            <svg class="name-svg" width="50" height="1.5" viewBox="0 0 400 125" xmlns="http://www.w3.org/2000/svg">
                 <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="white" stroke-width="1.5mm" fill="#212121"></g></svg></span></div>
     <form on:submit|preventDefault={submit}>
         <h1 class="main">You don't want to miss out! Register yourself here!</h1>
