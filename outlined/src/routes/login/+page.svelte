@@ -33,6 +33,10 @@
 </script>
 
 <main class="root">
+    <div class="nav-bar">
+        <span class="title">
+            <svg class="name-svg" width="400" height="125" viewBox="0 0 400 125" xmlns="http://www.w3.org/2000/svg">
+                <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="white" stroke-width="1.5mm" fill="#212121"></g></svg></span></div>
     <form on:submit|preventDefault={submit}>
         <h1 class="main">Please sign in</h1>
 
@@ -56,10 +60,11 @@
                 {/if}
             </button>
         </div>
-        <button class="button-container" type="submit" on:click|preventDefault={GoToMain}>Submit</button>
+
+        <button class="button" type="submit" on:click|preventDefault={GoToMain}>Submit</button>
 
         <h1 class="main">Do not have account yet? Register here!</h1>
-        <button class="button-container" on:click|preventDefault={GoToRegister}>Register</button>
+        <button class="button" on:click|preventDefault={GoToRegister}>Register</button>
     </form>
 </main>
 
@@ -79,13 +84,17 @@
     margin: 0;
     overflow-x: hidden;
 }
-.button-container
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-end;
-}
+button
+    {
+        height: 2rem;
+        width: 5rem;
+        font-size: 1rem;
+        border: 0.125rem solid #37474f;
+        border-radius: 25px;
+        color: #eceff1;
+        background-color: #f9a825;
+        position: relative;
+    }
 main
 {
     margin: none;
@@ -101,4 +110,10 @@ button svg {
 	#eye {
 		margin: -10px;
 	}
+input {
+    height: 1.5rem;
+    width: 10rem;
+    border: 0.125rem solid #37474f;
+    border-radius: 25px;
+}
 </style>

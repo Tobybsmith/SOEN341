@@ -24,20 +24,24 @@
 </script>
 
 <main class="root">
+    <div class="nav-bar">
+        <span class="title">
+            <svg class="name-svg" width="400" height="125" viewBox="0 0 400 125" xmlns="http://www.w3.org/2000/svg">
+                <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="white" stroke-width="1.5mm" fill="#212121"></g></svg></span></div>
     <form on:submit|preventDefault={submit}>
         <h1 class="main">You don't want to miss out! Register yourself here!</h1>
         
-        <h2 class="main">Name</h2>
+        <h2 class="main">Full Name:</h2>
         <div class="form-floating">
             <input bind:value={name} class="main" placeholder="Full Name">
         </div>
 
-        <h2 class="main">Email Address</h2>
+        <h2 class="main">Email Address:</h2>
         <div class="form-floating">
             <input bind:value={email} type="email" class="main" placeholder="name@example.com">
         </div>
 
-        <h2 class="main">Password</h2>
+        <h2 class="main">Password:</h2>
         <div class="pw">
             <input id="pw" type={show ? "text" : "password"} placeholder="enter your password "/> 
             <button id="eye" on:click|preventDefault={() => show = !show}>
@@ -54,7 +58,7 @@
             </button>
         </div>
 
-        <h2 class="main">Confirm Password</h2>
+        <h2 class="main">Confirm Password:</h2>
         <div class="pw">
             <input id="pw" type={show ? "text" : "password"} placeholder="enter your password "/> 
             <button id="eye" on:click|preventDefault={() => show = !show}>
@@ -71,7 +75,7 @@
             </button>
         </div>
 
-        <button class="button-container" type="submit" on:click|preventDefault={GoToMain}>Submit</button>
+        <button class="button" type="submit" on:click|preventDefault={GoToMain}>Submit</button>
     </form>
 </main>
 
@@ -91,12 +95,16 @@
         margin: 0;
         overflow-x: hidden;
     }
-    .button-container
+    button
     {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-end;
+        height: 2rem;
+        width: 5rem;
+        font-size: 1rem;
+        border: 0.125rem solid #37474f;
+        border-radius: 25px;
+        color: #eceff1;
+        background-color: #f9a825;
+        position: relative;
     }
     main
     {
@@ -113,4 +121,10 @@
 	#eye {
 		margin: -10px;
 	}
+    input {
+        height: 1.5rem;
+        width: 10rem;
+    border: 0.125rem solid #37474f;
+    border-radius: 25px;
+    }
     </style>
