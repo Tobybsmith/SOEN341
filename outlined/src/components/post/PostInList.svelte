@@ -10,6 +10,16 @@
     export let description = "null"
     export let job_id = -1
 
+    export let en = false;
+    export let fr = false;
+    export let bi = false;
+    export let contract = false;
+    export let customer = false;
+    export let degree = false;
+
+    //thousand USDs
+    export let sal = 40;
+
     function HandleClick()
     {
         //worst code ever
@@ -50,6 +60,11 @@
         background-color: var(--main-high);
         border-radius: 0.95rem 0.95rem 0 0;
         color: var(--main-color);
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
     }
     .description
     {

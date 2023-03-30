@@ -23,7 +23,7 @@ body
     width: 75rem;
     background-color: var(--main-color);
     color: var(--main-text);
-    border: 0.125rem solid var(--sec-color);
+    border: 0.125rem solid #212121;
     border-radius: 1rem;
 }
 .title{
