@@ -8,6 +8,9 @@
     import { listen } from 'svelte/internal';
 
     import Notify from "../../components/misc/Notify.svelte"
+
+    import {onMount, onDestroy} from 'svelte';
+    import { invalidate } from "$app/navigation";;
     
 
     // export let posts : [typeof SvelteComponent, Record<string, any>][] = [
@@ -168,6 +171,18 @@
         degree = false;
     }
 
+    export let your_end_point_prop;
+
+// resfresh your_end_point_prop
+    const apiInterval = setInterval(async () => {
+    await invalidate("/main");
+    }, 1000000); 
+
+
+    onDestroy(() => {
+    clearInterval(apiInterval);
+});
+
     //not janky i swear!
     Search();
     ResetSearch();
@@ -190,6 +205,11 @@
     {
         margin: 0;
         overflow-x: hidden;
+    }
+    main
+    {
+        margin: 0;
+        padding: 0;
     }
     .outer-container
     {
@@ -263,6 +283,10 @@
         border-radius: 1rem;
         padding-left: 0.35rem;
         padding-bottom: 0.1rem;
+    }
+    .search-container{
+
+        padding: 0.5rem; 
     }
     .search-button
     {

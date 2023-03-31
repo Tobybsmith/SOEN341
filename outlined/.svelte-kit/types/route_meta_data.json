@@ -4,9 +4,7 @@
 	"/main": [
 		"src/routes/main/+page.js"
 	],
-	"/main/[jobid]": [
-		"src/routes/main/[jobid]/+page.js"
-	],
+	"/main/[jobid]": [],
 	"/profile": [
 		"src/routes/profile/+page.js"
 	],
