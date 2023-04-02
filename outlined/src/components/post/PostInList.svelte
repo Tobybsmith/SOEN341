@@ -26,9 +26,9 @@
     //Thousand USDs
     export let sal = 40;
 
-    const distpatch = createEventDispatcher();
+    const dispatch = createEventDispatcher();
     function HandlePost(){
-        distpatch("message", {title, description, poster, date, salary, job_id
+        dispatch("message", {title, description, poster, date, salary, job_id
         }); 
 
     }
