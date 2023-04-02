@@ -383,7 +383,7 @@
             <div class="post-container">
                 {#if f_posty.length !== 0}
                     {#each posts as [post, props]}
-                        <svelte:component on:message={handleMessage} this={post} {...props}/>
+                        <svelte:component on:message={handleMessage} this={post} {...props}/> <!-- included event handler for the posts, allows for button to function-->
                     {/each}
                 {:else}
                         <Notify message="No Items matched search filters."/>

@@ -26,17 +26,6 @@
     //Thousand USDs
     export let sal = 40;
 
-    function HandleClick()
-    {
-        //worst code ever
-        if (true)
-        {
-            //goto job ID
-            console.log("Clicked Apply!");
-            console.log(job_id);
-        }
-    }
-
     const distpatch = createEventDispatcher();
     function HandlePost(){
         distpatch("message", {title, description, poster, date, salary, job_id
