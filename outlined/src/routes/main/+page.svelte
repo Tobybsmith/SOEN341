@@ -46,6 +46,13 @@
     }
 
     import { construct_svelte_component } from "svelte/internal";
+    // post info
+    export let title = "null"
+    export let description = "null"
+    export let poster = "null"
+    export let date = "null"
+    export let salary = 0; 
+    export let job_id = -1
 
     export let search_query = "";
     export let value = 40;
@@ -167,11 +174,24 @@
         contract = false;
         degree = false;
     }
+    function handleMessage(event){
+
+        title  = event.detail.title
+        description = event.detail.description
+        poster = event.detail.poster
+        date = event.detail.date
+        salary = event.detail.salary
+        job_id = event.detail.j 
+
+    }
+
 
     //not janky i swear!
     Search();
     ResetSearch();
    
+
+
     
 </script>
 
@@ -363,7 +383,7 @@
             <div class="post-container">
                 {#if f_posty.length !== 0}
                     {#each posts as [post, props]}
-                        <svelte:component this={post} {...props}/>
+                        <svelte:component on:message={handleMessage} this={post} {...props}/>
                     {/each}
                 {:else}
                         <Notify message="No Items matched search filters."/>
@@ -379,39 +399,10 @@
 
 
             <span class="expanded-post">
-                <ExpandedPost poster="Outlined Inc." description=
-                "               We are looking for a specialized developer with expertise in the Svelte language. Responsibilities will range from development to the implementation of digital products while staying at the forefront of technology. As part of the Technology and Development team, led by one of the co-founders of a renowned digital agency in Quebec, the Front-End developer will participate in the development of our exclusive multi-site approach with a fully customized interface, contribute to the creation and development of our product and work on various other projects. Come join a creative and dynamic team within a well-established company with numerous opportunities for advancement!
+
+                <ExpandedPost poster= {poster} description= {description}
                 
-                Your Responsibilities:
-                    -Collaborate with the Technology and Development team to design user experiences that are clear, intuitive and responsive to customer and business needs
-                    -Ensure Front-End development in Svelte code to meet the team's requirements
-                    -Contribute to the brainstorming and ideation process of solutions and development strategies for our platform
-                    -Design and develop high-performance, robust and maintainable functionalities
-                    -Ensure the follow-up of projects related to the development
-                    -Produce tests to validate the quality of the functionalities developed and ensure their non-regression in the context of future developments
-                    -Stay current with digital and technological innovation in order to work closely with the product, technology and development teams
-                
-                Our Offer:
-                    -Growing company with renowned partners and customers
-                    -Interesting and varied work with clients from a multitude of sectors and industries
-                    -Opportunity for advancement and professional development
-                    -Benefits, RRSP contribution, vacations and personal days
-                    -Modern, stimulating and collaborative work environment with state-of-the-art tools
-                    -Superb team
-                    -Ability to work from home and in the office
-                    -Candidate can be based anywhere in Quebec
-                    -Office located in the Old Port of Montreal
-                
-                Our Requirements:
-                    -A minimum of 3 years experience in Svelte Native development
-                    -A minimum of 3 years of experience in software development as well as Agile development and Scrum or Kanban methodology
-                    -Understanding and working knowledge of Svelte.js, Vue.js and Elixir frameworks
-                    -A genuine passion for development and a demonstrated taste for continuous learning
-                    -Working knowledge of standard database technologies, such as MySQL, Postgres and MongoDB
-                    -Passion for developing quality software using architecture concepts such as SOLID
-                    -Knowledge of functional programming concepts and microservices, an asset
-                    -Knowledge of continuous integration concepts and best practices, an asset" 
-                    title="Svelte Engineer" date="10/02/2022"/>
+                    title= {title} date= {date}/>
             </span>
         </div>
         
