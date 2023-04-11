@@ -16,11 +16,20 @@
         await push ('/login');
     }
 
-    function GoToMain(){
-        goto("/main");
+    function GoToProfile(){
+        goto("/profile");
     }
 
     let show = false
+
+    let selected = 'Student';
+	let options = [
+		'Student',
+		'Employee',
+	]
+
+	$: console.log('Changed selected:', selected)
+	$: console.log('Updated options:', options)
 </script>
 
 <main class="root">
@@ -74,8 +83,12 @@
                 {/if}
             </button>
         </div>
-
-        <button class="button" type="submit" on:click|preventDefault={GoToMain}>Submit</button>
+        <h2>I am a/an...</h2>
+        <select bind:value={selected}>
+            {#each options as value}<option {value}>{value}</option>{/each}
+        </select>
+        <h2>   </h2>
+        <button class="button" type="submit" on:click|preventDefault={GoToProfile}>Submit</button>
     </form>
 </main>
 
@@ -98,7 +111,7 @@
     button
     {
         height: 2rem;
-        width: 5rem;
+        width: 6rem;
         font-size: 1rem;
         border: 0.125rem solid #37474f;
         border-radius: 25px;
@@ -126,5 +139,16 @@
         width: 10rem;
     border: 0.125rem solid #37474f;
     border-radius: 25px;
+    }
+    select
+    {
+        height: 2rem;
+        width: 6rem;
+        font-size: 1rem;
+        border: 0.125rem solid #37474f;
+        border-radius: 25px;
+        color: #eceff1;
+        background-color: #f9a825;
+        position: relative;
     }
     </style>
