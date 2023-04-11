@@ -47,7 +47,7 @@
     </h1>
     <div>
         <Post > 
-            <svelte:component on:message={handleMessage} />
+            <svelte:component on:message={handleMessage}/>
         </Post>
      </div>
     
