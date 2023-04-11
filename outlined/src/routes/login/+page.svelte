@@ -60,7 +60,7 @@
                 {/if}
             </button>
         </div>
-
+        <h2>   </h2>
         <button class="button" type="submit" on:click|preventDefault={GoToProfile}>Submit</button>
 
         <h1 class="main">Do not have account yet? Register here!</h1>

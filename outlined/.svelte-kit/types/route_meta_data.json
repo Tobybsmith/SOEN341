@@ -1,5 +1,6 @@
 {
 	"/": [],
+	"/employee": [],
 	"/login": [],
 	"/main": [
 		"src/routes/main/+page.js"
