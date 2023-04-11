@@ -48,7 +48,7 @@
     }
     .outer-container
     {
-        width: 25rem;
+        width: 20rem;
         height: 7.5rem;
         background-color: var(--main-color);
         color: var(--main-text);
