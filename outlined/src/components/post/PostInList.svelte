@@ -3,13 +3,19 @@
 -->
 
 <script>
+    //Imports 
     import { goto } from "$app/navigation";
+    import {createEventDispatcher} from 'svelte'; 
 
-
+    //Post Information
     export let title = "null"
     export let description = "null"
+    export let poster = "null"
+    export let date = "null"
+    export let salary = 0; 
     export let job_id = -1
 
+    //Search Engine options 
     export let en = false;
     export let fr = false;
     export let bi = false;
@@ -17,18 +23,14 @@
     export let customer = false;
     export let degree = false;
 
-    //thousand USDs
+    //Thousand USDs
     export let sal = 40;
 
-    function HandleClick()
-    {
-        //worst code ever
-        if (true)
-        {
-            //goto job ID
-            console.log("Clicked Apply!");
-            console.log(job_id);
-        }
+    const dispatch = createEventDispatcher();
+    function HandlePost(){
+        dispatch("message", {title, description, poster, date, salary, job_id
+        }); 
+
     }
 </script>
 
@@ -112,8 +114,7 @@
     <div class="content">
         <div class="description">{description}</div>
         <div class="bottom-row">
-            <button on:click|once={HandleClick} class="apply-button">Read More...</button>
-            <!--<a href="." class="apply-link">Read More...</a>-->
+            <button on:click={HandlePost} class="apply-button">Read More...</button>
         </div>
     </div>
 </div>
