@@ -15,5 +15,7 @@
 		"src/routes/profile/[userid]/+page.js"
 	],
 	"/prototyping": [],
-	"/register": []
+	"/register": [
+		"src/routes/register/+page.js"
+	]
 }
