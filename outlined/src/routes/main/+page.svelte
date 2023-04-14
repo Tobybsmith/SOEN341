@@ -21,15 +21,19 @@
     // ];
 
     export let data;
-    const { jobs } = data;
+    // const { jobs } = data;
+    import jobs from '$lib/jobs.json';
+
+    // const { jobs } = jobz;
+
     let posty : [typeof SvelteComponent, Record<string, any>][] = [];
     let f_posty : [typeof SvelteComponent, Record<string, any>][] = [];
     for(let i=0; i<jobs.length; i++){
-        console.log(jobs[i].todo);
+        console.log(jobs[i].jobTitle);
         //tag all the jobs
         let temp_post = [Post, 
-        {title: jobs[i].todo, 
-        description: jobs[i].completed, 
+        {title: jobs[i].jobTitle, 
+        description: jobs[i].description, 
         id: jobs[i].id, 
         fr: (jobs[i].id % 2 == 0), 
         en: (jobs[i].id % 2 == 1), 
@@ -40,9 +44,8 @@
         degree: (jobs[i].id % 6 == 0)}];
         posty.push(temp_post);
     }
-       
-    // export let jobs : [typeof SvelteComponent, Record<string, any>][] = data;
 
+       
     function GotoProfile()
     {
         goto("/profile");
@@ -362,6 +365,7 @@
         accent-color: #f9a825;
     }
 </style>
+
 <body>
     <main>
         <div class="nav-bar">

@@ -1,0 +1,363 @@
+[
+    {
+    "id": 1,
+    "fullName": "John Doe",
+    "email": "john.doe@gmail.com",
+    "description": "I am a software engineer with over 5 years of experience developing web applications. I am passionate about building high-quality software that solves real-world problems. In my spare time, I enjoy hiking and playing guitar.",
+    "academicDegree": "Bachelor's degree",
+    "languages": [
+        {
+        "language": "French",
+        "fluency": "Intermediate"
+        },
+        {
+        "language": "English",
+        "fluency": "Fluent"
+        }
+    ],
+    "location": "Montreal, Canada",
+    "password": "password123",
+    "hiringOrWorking": "hiring",
+    "profilePicture": "https://via.placeholder.com/150"
+    },
+    {
+    "id": 2,
+    "fullName": "Jane Doe",
+    "email": "jane.doe@gmail.com",
+    "description": "I am a marketing professional with over 10 years of experience in the field. I specialize in digital marketing and have a deep understanding of SEO, SEM, and social media. In my free time, I enjoy practicing yoga and cooking.",
+    "academicDegree": "Master's degree",
+    "languages": [
+        {
+        "language": "French",
+        "fluency": "Fluent"
+        },
+        {
+        "language": "English",
+        "fluency": "Advanced"
+        }
+    ],
+    "location": "Paris, France",
+    "password": "password456",
+    "hiringOrWorking": "working",
+    "profilePicture": "https://via.placeholder.com/150"
+    },
+    {
+    "id": 3,
+    "fullName": "Bob Smith",
+    "email": "bob.smith@gmail.com",
+    "description": "I am a research scientist with a PhD in physics. My areas of expertise include quantum mechanics, materials science, and renewable energy. In my spare time, I enjoy reading science fiction novels and hiking in the mountains.",
+    "academicDegree": "PhD",
+    "languages": [
+        {
+        "language": "French",
+        "fluency": "Advanced"
+        },
+        {
+        "language": "English",
+        "fluency": "Intermediate"
+        }
+    ],
+    "location": "New York, USA",
+    "password": "password789",
+    "hiringOrWorking": "working",
+    "profilePicture": "https://via.placeholder.com/150"
+    },
+    {
+    "id": 4,
+    "fullName": "Alice Johnson",
+    "email": "alice.johnson@gmail.com",
+    "description": "I am a graphic designer with a passion for creating beautiful and functional designs. I have experience working on branding, marketing materials, and web design. In my free time, I enjoy painting and hiking in nature.",
+    "academicDegree": "Bachelor's degree",
+    "languages": [
+        {
+        "language": "French",
+        "fluency": "Fluent"
+        },
+        {
+        "language": "English",
+        "fluency": "Fluent"
+        }
+    ],
+    "location": "Toronto, Canada",
+    "password": "passwordabc",
+    "hiringOrWorking": "working",
+    "profilePicture": "https://via.placeholder.com/150"
+    },
+
+    {
+      "id": 5,
+      "fullName": "John Doe",
+      "email": "john.doe@gmail.com",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "academicDegree": "Bachelor's degree",
+      "languages": [
+        {
+          "language": "French",
+          "fluency": "Intermediate"
+        },
+        {
+          "language": "English",
+          "fluency": "Fluent"
+        }
+      ],
+      "location": "Montreal, Canada",
+      "password": "password123",
+      "hiringOrWorking": "working",
+      "profilePicture": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 6,
+      "fullName": "Jane Doe",
+      "email": "jane.doe@gmail.com",
+      "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "academicDegree": "Master's degree",
+      "languages": [
+        {
+          "language": "French",
+          "fluency": "Fluent"
+        },
+        {
+          "language": "English",
+          "fluency": "Advanced"
+        }
+      ],
+      "location": "Paris, France",
+      "password": "password456",
+      "hiringOrWorking": "working",
+      "profilePicture": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 7,
+      "fullName": "Bob Smith",
+      "email": "bob.smith@gmail.com",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "academicDegree": "PhD",
+      "languages": [
+        {
+          "language": "French",
+          "fluency": "Advanced"
+        },
+        {
+          "language": "English",
+          "fluency": "Intermediate"
+        }
+      ],
+      "location": "New York, USA",
+      "password": "password789",
+      "hiringOrWorking": "working",
+      "profilePicture": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 8,
+      "fullName": "Alice Johnson",
+      "email": "alice.johnson@gmail.com",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "academicDegree": "Bachelor's degree",
+      "languages": [
+        {
+          "language": "French",
+          "fluency": "Fluent"
+        },
+        {
+          "language": "English",
+          "fluency": "Fluent"
+        }
+      ],
+      "location": "Toronto, Canada",
+      "password": "passwordabc",
+      "hiringOrWorking": "working",
+      "profilePicture": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 9,
+      "fullName": "Maggie Lee",
+      "email": "maggie.lee@gmail.com",
+      "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "academicDegree": "Master's degree",
+      "languages": [
+        {
+          "language": "French",
+          "fluency": "Intermediate"
+        },
+        {
+          "language": "English",
+          "fluency": "Fluent"
+        }
+      ],
+      "location": "Vancouver, Canada",
+      "password": "passwordxyz",
+      "hiringOrWorking": "hiring",
+      "profilePicture": "https://via.placeholder.com/150"
+    },
+    {
+        "id": 10,
+        "fullName": "David Wong",
+        "email": "david.wong@gmail.com",
+        "description": "I am a software engineer with over 7 years of experience developing scalable web applications. I specialize in backend development and have experience with a wide range of technologies, including Python, Node.js, and MongoDB. In my free time, I enjoy playing video games and practicing martial arts.",
+        "academicDegree": "Bachelor's degree",
+        "languages": [
+          {
+            "language": "English",
+            "fluency": "Fluent"
+          },
+          {
+            "language": "French",
+            "fluency": "Fluent"
+          }
+        ],
+        "location": "San Francisco, USA",
+        "password": "password123",
+        "hiringOrWorking": "working",
+        "profilePicture": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 11,
+        "fullName": "Lisa Chen",
+        "email": "lisa.chen@gmail.com",
+        "description": "I am a data scientist with experience in machine learning and statistical analysis. I have worked on a variety of projects in the healthcare, finance, and e-commerce industries. In my free time, I enjoy playing piano and hiking in the mountains.",
+        "academicDegree": "Master's degree",
+        "languages": [
+          {
+            "language": "English",
+            "fluency": "Fluent"
+          },
+          {
+            "language": "French",
+            "fluency": "Intermediate"
+          }
+        ],
+        "location": "New York, USA",
+        "password": "password456",
+        "hiringOrWorking": "working",
+        "profilePicture": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 12,
+        "fullName": "Ryan Lee",
+        "email": "ryan.lee@gmail.com",
+        "description": "I am a product manager with experience in the tech industry. I have worked on a variety of products, including mobile apps and web platforms. I am passionate about building products that provide value to users. In my free time, I enjoy playing basketball and reading science fiction novels.",
+        "academicDegree": "Bachelor's degree",
+        "languages": [
+          {
+            "language": "English",
+            "fluency": "Fluent"
+          },
+          {
+            "language": "French",
+            "fluency": "Fluent"
+          }
+        ],
+        "location": "Seattle, USA",
+        "password": "password789",
+        "hiringOrWorking": "hiring",
+        "profilePicture": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 13,
+        "fullName": "Erica Kim",
+        "email": "erica.kim@gmail.com",
+        "description": "I am a UX designer with experience in the tech industry. I specialize in user research, interaction design, and prototyping. I am passionate about creating products that are intuitive and delightful to use. In my free time, I enjoy traveling and trying new foods.",
+        "academicDegree": "Master's degree",
+        "languages": [
+          {
+            "language": "English",
+            "fluency": "Fluent"
+          },
+          {
+            "language": "French",
+            "fluency": "Fluent"
+          }
+        ],
+        "location": "San Francisco, USA",
+        "password": "passwordabc",
+        "hiringOrWorking": "hiring",
+        "profilePicture": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 14,
+        "fullName": "Alex Smith",
+        "email": "alex_smith@gmail.com",
+        "description": "I am a software engineer with experience in full-stack development. I have worked on web applications, APIs, and mobile apps. I am passionate about building scalable, performant, and maintainable software. In my free time, I enjoy playing video games and watching movies.",
+        "academicDegree": "Bachelor's degree",
+        "languages": [
+          {
+            "language": "English",
+            "fluency": "Fluent"
+          }
+        ],
+        "location": "San Francisco, USA",
+        "password": "password123",
+        "hiringOrWorking": "hiring",
+        "profilePicture": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 15,
+        "fullName": "Lisa Chen",
+        "email": "lisa_chen@gmail.com",
+        "description": "I am a data analyst with experience in machine learning and data visualization. I have worked with various data analysis tools such as Python, R, and Tableau. In my free time, I enjoy practicing yoga and playing board games with my friends.",
+        "academicDegree": "Master's degree",
+        "languages": [
+          {
+            "language": "English",
+            "fluency": "Fluent"
+          }
+        ],
+        "location": "Seattle, USA",
+        "password": "password456",
+        "hiringOrWorking": "working",
+        "profilePicture": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 16,
+        "fullName": "David Lee",
+        "email": "david_lee@gmail.com",
+        "description": "I am a software developer with experience in front-end and back-end development. I have worked on large-scale applications with millions of users. I am passionate about building user-friendly and performant software. In my free time, I enjoy playing basketball and reading books.",
+        "academicDegree": "Bachelor's degree",
+        "languages": [
+          {
+            "language": "English",
+            "fluency": "Fluent"
+          }
+        ],
+        "location": "New York, USA",
+        "password": "password789",
+        "hiringOrWorking": "working",
+        "profilePicture": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 17,
+        "fullName": "Michael Kim",
+        "email": "michael_kim@gmail.com",
+        "description": "I am a software engineer with experience in back-end development and infrastructure. I have worked on distributed systems, cloud computing, and DevOps. I am passionate about building scalable and reliable software. In my free time, I enjoy hiking and cooking.",
+        "academicDegree": "Master's degree",
+        "languages": [
+          {
+            "language": "English",
+            "fluency": "Fluent"
+          }
+        ],
+        "location": "Vancouver, Canada",
+        "password": "passwordabc",
+        "hiringOrWorking": "working",
+        "profilePicture": "https://via.placeholder.com/150"
+      },
+      {
+        "id": 18,
+        "fullName": "Michelle Wong",
+        "email": "michelle_wong@gmail.com",
+        "description": "I am a product manager with experience in software development and user experience design. I have worked on various products, including web applications and mobile apps. I am passionate about building products that solve real-world problems. In my free time, I enjoy traveling and photography.",
+        "academicDegree": "Master's degree",
+        "languages": [
+          {
+            "language": "English",
+            "fluency": "Fluent"
+          }
+        ],
+          "location": "Vancouver, Canada",
+          "password": "password123",
+          "hiringOrWorking": "working",
+          "profilePicture": "https://via.placeholder.com/150"
+        }
+
+
+  ]

@@ -16,6 +16,6 @@
 		"src/routes/profile/[userid]/+page.js"
 	],
 	"/register": [
-		"src/routes/register/+page.js"
+		"src/routes/register/+page.server.js"
 	]
 }
