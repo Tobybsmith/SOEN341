@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import { goto } from '$app/navigation';
 
 // @ts-nocheck
@@ -30,6 +30,52 @@
     }
 
     let show = false
+
+    let errors: { [email: string]: any } = {};
+
+  function isFormValid(data: { [email: string]: any }): boolean {
+    return !Object.keys(errors).some((email) =>
+      Object.keys(errors[email]).some(
+        (errorName) => errors[email][errorName],
+      ),
+    );
+  }
+
+  function validateForm(data: { [email: string]: any }):void {
+    if (!isRequiredFieldValid(data.email)) {
+      errors['email'] = { ...errors['email'], required: true };
+    } else {
+      errors['email'] = { ...errors['email'], required: false };
+    }
+
+    if (!isRequiredFieldValid(data.password)) {
+      errors['password'] = { ...errors['password'], required: true };
+    } else {
+      errors['password'] = { ...errors['password'], required: false };
+    }
+  }
+
+  function isRequiredFieldValid(value) {
+    return value != null && value !== '';
+  }
+
+  function onSubmit(e) {
+    const formData = new FormData(e.target);
+
+    const data: any = {};
+    for (let field of formData) {
+      const [key, value] = field;
+      data[key] = value;
+    }
+
+    validateForm(data);
+
+    if (isFormValid(data)) {
+      console.log(data);
+    } else {
+      console.log('Invalid Form');
+    }
+  }
 </script>
 
 <main class="root">
@@ -37,16 +83,19 @@
         <span class="title">
             <svg class="name-svg" width="400" height="125" viewBox="0 0 400 125" xmlns="http://www.w3.org/2000/svg">
                 <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="white" stroke-width="1.5mm" fill="#212121"></g></svg></span></div>
-    <form on:submit|preventDefault={submit}>
+    <form on:submit|preventDefault={onSubmit}>
         <h1 class="main">Please sign in</h1>
 
         <h3 class="main">Email Address:</h3>
         <div class="form-floating">
-            <input bind:value={email} type="email" class="form-control" placeholder="name@example.com">
+            <input bind:value={email} type="email" class="form-control" placeholder="name@example.com" required>
+            {#if errors.email && errors.email.required}
+        <p class="error-message">Email is required</p>
+      {/if}
         </div>
         <h3 class="main">Password:</h3>
         <div class="pw">
-            <input id="pw" type={show ? "text" : "password"} placeholder="enter your password "/> 
+            <input id="pw" type={show ? "text" : "password"} placeholder="enter your password " required/> 
             <button id="eye" on:click|preventDefault={() => show = !show}>
                 {#if show}
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="red">
@@ -59,6 +108,9 @@
                 </svg>
                 {/if}
             </button>
+            {#if errors.password && errors.password.required}
+        <p class="error-message">Password is required</p>
+      {/if}
         </div>
         <h2>   </h2>
         <button class="button" type="submit" on:click|preventDefault={GoToProfile}>Submit</button>
@@ -116,4 +168,10 @@ input {
     border: 0.125rem solid #37474f;
     border-radius: 25px;
 }
+.error-message {
+    color: tomato;
+    flex: 0 0 100%;
+    margin: 0 2px;
+    font-size: 0.8em;
+  }
 </style>
