@@ -11,4 +11,5 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v3
       - run: npm -D i
+      - run: cd outlined
       - run: npm run dev
