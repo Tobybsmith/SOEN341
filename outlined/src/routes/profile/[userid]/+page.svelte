@@ -11,18 +11,29 @@
     // const users = data.users
     const { user } = data
 
-    const img = user.image;
-    const username = user.firstName + " " + user.lastName;
-    const display_name = user.firstName;
+    // import user from '$lib/users.json';
+
+    // const img = user.image;
+    // const username = user.firstName + " " + user.lastName;
+    // const display_name = user.firstName;
+    // const user_id = user.id;
+    // const description = user.company.title;
+    // const location = user.address.city;
+    console.log(user)
+
+    const img = user.profilePicture;
+    const username = user.fullName;
+    const display_name = user.fullName;
     const user_id = user.id;
-    const description = user.company.title;
-    const location = user.address.city;
+    const description = user.description;
+    const location = user.location;
+    const user_resume_ref = user.academicDegree;
 
 
 </script>
 
 <body>
-    <Profile user_desc={description} user_photo_ref={img} display_name={display_name} user_id={user_id} username={username} user_location={location}/>
+    <Profile user_desc={description} user_photo_ref={img} display_name={display_name} user_id={user_id} username={username} user_location={location} user_resume_ref={user_resume_ref}/>
 </body>
 
 <style>

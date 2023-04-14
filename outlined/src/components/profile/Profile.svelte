@@ -55,7 +55,7 @@
             <button on:click={button_func}>Save</button>
         </div>
         <div class="user-location left one-rem-il one-rem-bl"><span class="big">User Location: </span>{user_location}</div>
-        <div class="user-resume left one-rem-il one-rem-bl"><span class="big">User Resume: </span>{user_resume_ref}</div>
+        <div class="user-resume left one-rem-il one-rem-bl"><span class="big">Degree: </span>{user_resume_ref}</div>
     </div>
     <div class="hist right">
         <div class="applied-to one-rem-il">

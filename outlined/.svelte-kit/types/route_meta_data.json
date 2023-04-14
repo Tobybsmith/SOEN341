@@ -16,6 +16,6 @@
 	],
 	"/prototyping": [],
 	"/register": [
-		"src/routes/register/+page.js"
+		"src/routes/register/+page.server.js"
 	]
 }

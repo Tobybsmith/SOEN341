@@ -3,28 +3,79 @@
     import axios from 'axios';
     import {push} from 'svelte-spa-router'
 
-    let name = ' ', email = ' ', password = ' ', confirmpassword = ' '
+    import users from '$lib/users.json';
 
+    let name = ' ', email = ' ', password = ' ', confirmpassword = ' ';
+    
+
+    
+    // export let data;
+    // const { user } = data
     $:submit = async () => {
+        
+
         await axios.post('register', {
             name,
             email,
             password,
             confirmpassword
+            
         });
-
-        
 
         await push ('/login');
     }
+  
 
     function GoToProfile(){
-        goto("/profile");
+        console.log("submit")
+
+
+        // goto("/profile");
     }
 
     function GoToEmployee(){
         goto("/employee");
     }
+
+
+
+    let newish = {
+        "id": 90,
+        "fullName": "Michelle Wong",
+        "email": "michelle_wong@gmail.com",
+        "description": "I am a product manager with experience in software development and user experience design. I have worked on various products, including web applications and mobile apps. I am passionate about building products that solve real-world problems. In my free time, I enjoy traveling and photography.",
+        "academicDegree": "Master's degree",
+        "languages": [
+          {
+            "language": "English",
+            "fluency": "Fluent"
+          }
+        ],
+          "location": "Vancouver, Canada",
+          "password": "password123",
+          "hiringOrWorking": "working",
+          "profilePicture": "https://via.placeholder.com/150"
+        }
+
+    // addUser(newish);
+
+
+    function addUser(newUser) {
+    fetch('users.json')
+      .then(response => response.json())
+      .then(data => {
+        data.users.push(newUser);
+        fetch('users.json', {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+      });
+  }
+
+
 
     let show = false
 </script>
@@ -35,21 +86,25 @@
             <svg class="name-svg" width="50" height="1.5" viewBox="0 0 400 125" xmlns="http://www.w3.org/2000/svg">
                 <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="white" stroke-width="1.5mm" fill="#212121"></g></svg></span></div>
     <form on:submit|preventDefault={submit}>
+    <!-- <form method="POST" action="?/create"> -->
         <h1 class="main">You don't want to miss out! Register yourself here!</h1>
         
         <h2 class="main">Full Name:</h2>
         <div class="form-floating">
             <input bind:value={name} class="main" placeholder="Full Name">
+            <!-- <input type = "text" class="main" name="name" placeholder="Full Name"> -->
         </div>
 
         <h2 class="main">Email Address:</h2>
         <div class="form-floating">
-            <input bind:value={email} type="email" class="main" placeholder="name@example.com">
+            <input bind:value={email} type="email" class="main" placeholder="name@example.com" >
+            <!-- <input type = "email" class="main" name="email" placeholder="name@example.com"> -->
         </div>
 
         <h2 class="main">Password:</h2>
         <div class="pw">
             <input id="pw" type={show ? "text" : "password"} placeholder="enter your password "/> 
+            <!-- <input type={show ? "text" : "password"} class="main" name="password" placeholder="enter your password"> -->
             <button id="eye" on:click|preventDefault={() => show = !show}>
                 {#if show}
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="red">
@@ -67,6 +122,7 @@
         <h2 class="main">Confirm Password:</h2>
         <div class="pw">
             <input id="pw" type={show ? "text" : "password"} placeholder="enter your password "/> 
+            <!-- <input type={show ? "text" : "password"} class="main" name="password" placeholder="enter your password"> -->
             <button id="eye" on:click|preventDefault={() => show = !show}>
                 {#if show}
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="red">

@@ -23,7 +23,7 @@ export const dictionary = {
 	"/profile": [7],
 	"/profile/[userid]": [8],
 	"/prototyping": [9],
-	"/register": [10]
+	"/register": [~10]
 };
 
 export const hooks = {

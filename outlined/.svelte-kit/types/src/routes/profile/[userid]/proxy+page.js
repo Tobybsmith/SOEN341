@@ -12,13 +12,18 @@ export const load = async({ fetch, params }) => {
     // const userData = await userRes.json()
     // const users = userData.users
 
-
+    
     //Fetch Dummy data from dummys
     const fetchUser = async (id) => {
-        const res = await fetch(`https://dummyjson.com/users/${id}`)
-        const data = await res.json()
+        // const res = await fetch(`https://dummyjson.com/users/${id}`)
+        // const data = await res.json()
+        import user from '$lib/users.json';
+
+
         return data
     }
+
+    
 
     return{
         user: fetchUser(params.userid)

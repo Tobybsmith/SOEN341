@@ -1,0 +1,152 @@
+[  
+    {    "id": 1,    
+    "jobTitle": "Frontend Developer",    
+    "description": "We're looking for a skilled frontend developer with experience in HTML, CSS, and JavaScript to join our team. The ideal candidate will have experience building responsive web applications and working with frameworks like React and Angular.",    "tags": ["HTML", "CSS", "JavaScript", "React", "Angular"],
+    "company": "Acme Corporation",
+    "requirements": "3+ years of experience as a frontend developer, strong knowledge of HTML, CSS, and JavaScript, experience with React and/or Angular, experience with responsive design, strong communication skills",
+    "image": "https://example.com/images/frontend-developer.jpg"
+  },
+  {
+    "id": 2,
+    "jobTitle": "Backend Developer",
+    "description": "We're seeking a backend developer with experience in building scalable web applications using languages like Python or Java. The ideal candidate will have experience working with databases and APIs, and will be comfortable with server-side programming and web development frameworks.",
+    "tags": ["Python", "Java", "APIs", "Databases"],
+    "company": "Widget Corp",
+    "requirements": "3+ years of experience as a backend developer, strong knowledge of Python or Java, experience with databases and APIs, experience with server-side programming, experience with web development frameworks",
+    "image": "https://example.com/images/backend-developer.jpg"
+  },
+  {
+    "id": 3,
+    "jobTitle": "Product Manager",
+    "description": "We're looking for an experienced product manager to lead the development of our software products. The ideal candidate will have a background in software development and will be able to work collaboratively with cross-functional teams to develop and launch products that meet customer needs.",
+    "tags": ["Product Management", "Software Development"],
+    "company": "Innovative Co",
+    "requirements": "5+ years of experience in product management, experience with software development, experience working with cross-functional teams, strong analytical and problem-solving skills, excellent communication skills",
+    "image": "https://example.com/images/product-manager.jpg"
+  },
+  {
+    "id": 4,
+    "jobTitle": "Frontend Developer",
+    "description": "We're looking for a skilled frontend developer with experience in HTML, CSS, and JavaScript to join our team. The ideal candidate will have experience building responsive web applications and working with frameworks like React and Angular.",
+    "tags": ["HTML", "CSS", "JavaScript", "React", "Angular"],
+    "company": "Acme Corporation",
+    "requirements": "3+ years of experience as a frontend developer, strong knowledge of HTML, CSS, and JavaScript, experience with React and/or Angular, experience with responsive design, strong communication skills",
+    "image": "https://example.com/images/frontend-developer.jpg"
+  },
+  {
+    "id": 5,
+    "jobTitle": "Backend Developer",
+    "description": "We're seeking a backend developer with experience in building scalable web applications using languages like Python or Java. The ideal candidate will have experience working with databases and APIs, and will be comfortable with server-side programming and web development frameworks.",
+    "tags": ["Python", "Java", "APIs", "Databases"],
+    "company": "Widget Corp",
+    "requirements": "3+ years of experience as a backend developer, strong knowledge of Python or Java, experience with databases and APIs, experience with server-side programming, experience with web development frameworks",
+    "image": "https://example.com/images/backend-developer.jpg"
+  },
+  {
+    "id": 6,
+    "jobTitle": "Product Manager",
+    "description": "We're looking for an experienced product manager to lead the development of our software products. The ideal candidate will have a background in software development and will be able to work collaboratively with cross-functional teams to develop and launch products that meet customer needs.",
+    "tags": ["Product Management", "Software Development"],
+    "company": "Innovative Co",
+    "requirements": "5+ years of experience in product management, experience with software development, experience working with cross-functional teams, strong analytical and problem-solving skills, excellent communication skills",
+    "image": "https://example.com/images/product-manager.jpg"
+  },
+  {
+    "id": 7,
+    "jobTitle": "Data Scientist",
+    "description": "We're seeking a data scientist to join our team. The ideal candidate will have experience with statistical modeling and machine learning algorithms, as well as experience working with large datasets and data visualization tools.",
+    "tags": ["Data Science", "Statistics", "Machine Learning", "Data Visualization"],
+    "company": "Global Analytics",
+    "requirements": "3+ years of experience as a data scientist, strong knowledge of statistical modeling and machine learning algorithms, experience working with large datasets, experience with data visualization tools",
+    "image": "https://example.com/images/data-scientist.jpg"
+  },
+  {    "id": 8,    
+    "jobTitle": "Marketing Manager",    
+    "description": "We're looking for a marketing manager with experience in developing and executing marketing strategies across multiple channels. The ideal candidate will have experience with market research, social media marketing, email marketing, and content marketing.",    "tags": ["Marketing", "Market Research", "Social Media Marketing", "Email Marketing", "Content Marketing"],
+    "company": "Acme Corporation",
+    "requirements": "5+ years of experience in marketing, experience with market research, social media marketing, email marketing, and content marketing, strong communication and leadership skills",
+    "image": "https://example.com/images/marketing-manager.jpg"
+  },
+  {
+    "id": 9,
+    "jobTitle": "Financial Analyst",
+    "description": "We're seeking a financial analyst to help us with financial planning and analysis. The ideal candidate will have experience with financial modeling, forecasting, and data analysis.",
+    "tags": ["Finance", "Financial Modeling", "Forecasting", "Data Analysis"],
+    "company": "Widget Corp",
+    "requirements": "3+ years of experience as a financial analyst, strong knowledge of financial modeling, forecasting, and data analysis, experience with Excel or other financial software, strong communication skills",
+    "image": "https://example.com/images/financial-analyst.jpg"
+  },
+  {
+    "id": 10,
+    "jobTitle": "Human Resources Manager",
+    "description": "We're looking for a human resources manager to oversee our company's HR operations. The ideal candidate will have experience with employee relations, performance management, benefits administration, and recruitment.",
+    "tags": ["Human Resources", "Employee Relations", "Performance Management", "Benefits Administration", "Recruitment"],
+    "company": "Innovative Co",
+    "requirements": "5+ years of experience in human resources, experience with employee relations, performance management, benefits administration, and recruitment, strong leadership and communication skills",
+    "image": "https://example.com/images/human-resources-manager.jpg"
+  },
+  {
+    "id": 11,
+    "jobTitle": "Software Engineer",
+    "description": "We're seeking a software engineer to help us build and maintain our software applications. The ideal candidate will have experience with programming languages like Java or Python, and will be comfortable with front-end and back-end development.",
+    "tags": ["Software Development", "Java", "Python", "Front-End Development", "Back-End Development"],
+    "company": "Big Software Co",
+    "requirements": "3+ years of experience as a software engineer, strong knowledge of programming languages like Java or Python, experience with front-end and back-end development, experience with Agile development methodologies, strong problem-solving skills",
+    "image": "https://example.com/images/software-engineer.jpg"
+  },
+  {
+    "id": 12,
+    "jobTitle": "Graphic Designer",
+    "description": "We're looking for a talented graphic designer to create visual designs for our marketing materials and digital products. The ideal candidate will have experience with Adobe Creative Suite and will be comfortable with both print and digital design.",
+    "tags": ["Graphic Design", "Adobe Creative Suite", "Print Design", "Digital Design"],
+    "company": "Design Studio",
+    "requirements": "3+ years of experience as a graphic designer, strong portfolio demonstrating experience with Adobe Creative Suite and both print and digital design, excellent communication and collaboration skills",
+    "image": "https://example.com/images/graphic-designer.jpg"
+  },
+  {
+    "id": 13,
+    "jobTitle": "Marketing Coordinator",
+    "description": "We're seeking a marketing coordinator to help us plan and execute marketing campaigns across various channels. The ideal candidate will have experience with marketing analytics, email marketing, and social media marketing.",
+    "tags": ["Marketing Analytics", "Email Marketing", "Social Media Marketing"],
+    "company": "Acme Corp",
+    "requirements": "2+ years of experience in marketing, experience with marketing analytics, email marketing, and social media marketing, strong communication and project management skills",
+    "image": "https://example.com/images/marketing-coordinator.jpg"
+  },
+  {
+    "id": 14,
+    "jobTitle": "Sales Representative",
+    "description": "We're seeking a sales representative to help us sell our products and services to new and existing customers. The ideal candidate will have experience with B2B sales, lead generation, and account management.",
+    "tags": ["B2B Sales", "Lead Generation", "Account Management"],
+    "company": "Widget Co",
+    "requirements": "2+ years of experience in sales, experience with B2B sales, lead generation, and account management, strong communication and negotiation skills",
+    "image": "https://example.com/images/sales-representative.jpg"
+  },
+  {
+    "id": 15,
+    "jobTitle": "Graphic Designer",
+    "description": "We're seeking a graphic designer to help us create visually compelling designs for our digital and print materials. The ideal candidate will have experience with design software like Adobe Creative Suite and a strong portfolio demonstrating their design skills.",
+    "tags": ["Graphic Design", "Adobe Creative Suite"],
+    "company": "Innovative Co",
+    "requirements": "2+ years of experience in graphic design, experience with design software like Adobe Creative Suite, strong portfolio demonstrating design skills, excellent communication and collaboration skills",
+    "image": "https://example.com/images/graphic-designer.jpg"
+  },
+  {
+    "id": 16,
+    "jobTitle": "Accountant",
+    "description": "We're seeking an accountant to help us manage our finances and ensure compliance with financial regulations. The ideal candidate will have experience with financial reporting, bookkeeping, and tax preparation.",
+    "tags": ["Financial Reporting", "Bookkeeping", "Tax Preparation"],
+    "company": "Big Finance Co",
+    "requirements": "3+ years of experience in accounting, strong knowledge of financial reporting, bookkeeping, and tax preparation, experience with accounting software, excellent attention to detail and analytical skills",
+    "image": "https://example.com/images/accountant.jpg"
+  },
+  {
+    "id": 17,
+    "jobTitle": "Human Resources Manager",
+    "description": "We're seeking a human resources manager to help us develop and implement HR policies and procedures. The ideal candidate will have experience with recruitment, performance management, and employee relations.",
+    "tags": ["Recruitment", "Performance Management", "Employee Relations"],
+    "company": "HR Solutions Inc",
+    "requirements": "5+ years of experience in human resources, strong knowledge of recruitment, performance management, and employee relations, experience developing HR policies and procedures, excellent communication and leadership skills",
+    "image": "https://example.com/images/human-resources-manager.jpg"
+  }
+
+]
