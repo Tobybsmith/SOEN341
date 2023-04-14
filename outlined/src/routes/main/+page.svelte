@@ -425,9 +425,7 @@
 
             <span class="expanded-post">
                 {#if visible}
-                <ExpandedPost poster= {poster} description= {description}
-                
-                    title= {title} date= {date}/>
+                <ExpandedPost poster= {poster} description= {description} title= {title} date= {date}/>
                 {/if}
             </span>
         </div>
