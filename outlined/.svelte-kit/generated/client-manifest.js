@@ -21,9 +21,7 @@ export const dictionary = {
 	"/main": [5],
 	"/main/[jobid]": [6],
 	"/profile": [7],
-	"/profile/[userid]": [8],
-	"/prototyping": [9],
-	"/register": [~10]
+
 };
 
 export const hooks = {

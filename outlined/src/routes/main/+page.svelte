@@ -59,6 +59,7 @@
     export let date = "null"
     export let salary = 0; 
     export let job_id = -1
+    export let visible = false; // for initial visibility
 
     export let search_query = "";
     export let value = 40;
@@ -187,8 +188,8 @@
         poster = event.detail.poster
         date = event.detail.date
         salary = event.detail.salary
-        job_id = event.detail.j
-
+        job_id = event.detail.j 
+        visible = true;
     }
 
 
@@ -411,7 +412,7 @@
             <div class="post-container">
                 {#if f_posty.length !== 0}
                     {#each posts as [post, props]}
-                        <svelte:component on:message={handleMessage} this={post} {...props}/> <!-- included event handler for the posts, allows for button to function-->
+                        <svelte:component on:message={handleMessage} this={post} {...props} /> <!-- included event handler for the posts, allows for button to function-->
                     {/each}
                 {:else}
                         <Notify message="No Items matched search filters."/>
@@ -419,23 +420,12 @@
                 
             </div>
 
-            <!-- <div class="job-container">
-                {#each jobs as job}
-                <h2>{job.todo}</h2>
-                {/each}
-            </div> -->
-
-
             <span class="expanded-post">
-
-                <ExpandedPost poster= {poster} description= {description}
-                
-                    title= {title} date= {date}/>
+                {#if visible}
+                <ExpandedPost poster= {poster} description= {description} title= {title} date= {date}/>
+                {/if}
             </span>
         </div>
-        
-
-
     </main> 
 
 

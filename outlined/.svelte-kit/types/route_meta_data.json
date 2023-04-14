@@ -11,10 +11,10 @@
 	"/profile": [
 		"src/routes/profile/+page.js"
 	],
+	"/profile/more": [],
 	"/profile/[userid]": [
 		"src/routes/profile/[userid]/+page.js"
 	],
-	"/prototyping": [],
 	"/register": [
 		"src/routes/register/+page.server.js"
 	]

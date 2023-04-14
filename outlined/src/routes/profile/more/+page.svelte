@@ -1,11 +1,10 @@
 <script lang="ts">
-    import { goto } from "$app/navigation";
-    import Post from "../post/PostInList.svelte"
+    import Post from "../../../components/post/PostInList.svelte"
     
     import type {SvelteComponent, SvelteComponentTyped} from 'svelte';
     //All this will be filled in with a database query by the app when the user logs in
-    export let username = "null";
-    export let display_name = "null";
+    export let username = "";
+    export let display_name = "tibsmith";
     export let user_id = 0;
     export let user_photo_ref = "null"
     export let user_desc = "null";
@@ -18,6 +17,9 @@
         [Post, {title: "Textbook Author", description: "Applicant must have a PhD in related field.", id: 1}],
         [Post, {title: "Farmer", description: "Applicant must be comfortable around sheep", id: 2}],
         [Post, {title: "Sheep", description: "10 year's experince required. Must be comfortable around farmers. No black sheep!", id: 3}],
+        [Post, {title: "SAE AeroDesign Coordinator", description: "Must hate being alive", id: 1}],
+        [Post, {title: "Teacher", description: "Applicant mustn't be a weirdo", id: 2}],
+        [Post, {title: "Astronaut", description: "Applciant must be at least 50. Applicant must have a space-themed last name", id: 3}],
     ];
 
     export let shortlisted : [typeof SvelteComponent, Record<string, any>][]= [
@@ -31,47 +33,29 @@
     }
     function see_more_hist()
     {
-        goto("/profile/more");
+        console.log("See more");
     }
     function see_more_list()
     {
-        goto("/profile/more");
+        console.log("Also see more");
     }
 </script>
 
 <body>
-    <div class="display-name wide bigger top-curve">{display_name}'s Profile</div>
+    <div class="display-name wide bigger top-curve">All Applied and Shortlisted jobs</div>
     <main>
-    <img src={user_photo_ref} alt="User's Profile" class="user-photo left one-rem-il one-rem-bl">
-    <div class="text-container">
-        <!--Utility Class moment lmao-->
-        <div class="username left one-rem-il one-rem-bl"><span class="big">Username: </span>{username}</div>
-        <div class="user-desc left one-rem-il one-rem-bl">
-            <span class="big">User Bio: </span>
-            <!--Two way binding, user_desc will change as the user updates the form!-->
-            <!--The save button isn't needed at all, but this is called User Experience ;)-->
-            <input type="text" name="user-bio" class="user-bio" bind:value={user_desc}>
-            <button on:click={button_func}>Save</button>
-        </div>
-        <div class="user-location left one-rem-il one-rem-bl"><span class="big">User Location: </span>{user_location}</div>
-        <div class="user-resume left one-rem-il one-rem-bl"><span class="big">Degree: </span>{user_resume_ref}</div>
-    </div>
-    <div class="hist right">
         <div class="applied-to one-rem-il">
             <p class="big">Previously Applied To:</p>
             {#each applied_to as [listing, props]}
                 <svelte:component this={listing} {...props} />
             {/each}
-            <button on:click={see_more_hist} class="see-more">See More</button>
         </div>
-        <div class="viewed one-rem-il">
+        <div class="">
             <p class="big">Short-Listed Posts:</p>
             {#each shortlisted as [listing, props]}
                 <svelte:component this={listing} {...props} />
             {/each}
-            <button on:click={see_more_list} class="see-more">See More</button>
         </div>
-    </div>
     </main>
 </body>
 
@@ -81,33 +65,11 @@
         border: 0.25rem solid #37474f;
         border-radius: 25px;
         color: #37474f;
+        margin-inline: auto;
     }
     main
     {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        background-color: var(--main-col);
-        width: auto;
-        margin: 0;
-    }
-    img
-    {
-        max-width: 350px;
-        aspect-ratio: 1/1;
-        background-color: var(--main-high);
-        grid-column: 1/2;
-        grid-row: 1/2;
-        border: 0.25rem solid #37474f;
-    }
-    a:hover
-    {
-        color: #37474f;
-    }
-    .text-container
-    {
-        grid-column: 1/2;
-        grid-row: 2/2;
+        display: flex;
     }
     .display-name
     {

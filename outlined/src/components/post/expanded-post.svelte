@@ -9,6 +9,11 @@
     export let job_id = -1;
     //EN, FR, BI, CUSTOMER, DEGREE, CONTRACT
     export let tags = [false, false, false, false, false, false];
+
+    function handleApply(){
+        
+
+    }
 </script>
 
 <style>
@@ -54,6 +59,26 @@ body
     margin-left: auto; 
 
 }
+button:active{
+        background-color: #f9a825;
+        transition-duration: 0;
+
+}
+button{
+        height: 2rem;
+        width: 8rem;
+        font-size: 1rem;
+        margin-left: auto;
+        border: 0.125rem solid #37474f;
+        border-radius: 25px;
+        color: #eceff1;
+        background-color: #f9a825;
+        position: relative;
+ }
+ button:hover{
+        color: #37474f;
+        background-color: #eceff1;
+}
 </style>
 
 <body>
@@ -63,6 +88,7 @@ body
             <div class = "description"> {description}</div>
             <div class = "bottom">
                 <span class="poster"> Posted by: {poster}</span>
+                <button on:click={handleApply} class="apply-button">Apply!</button>
                 <span class="date"> Posted: {date} </span>
             </div>
         </div>

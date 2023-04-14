@@ -14,6 +14,6 @@
 
 <html>
     <body>
-        {message}
+	<p id="message"> {message}
     </body>
 </html>
