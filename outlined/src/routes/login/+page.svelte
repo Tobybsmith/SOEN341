@@ -20,9 +20,9 @@
             await push('/');
         }
     }
-    function GoToMain()
+    function GoToProfile()
     {
-        goto("/main");
+        goto("/profile");
     }
 
     function GoToRegister(){
@@ -60,8 +60,8 @@
                 {/if}
             </button>
         </div>
-
-        <button class="button" type="submit" on:click|preventDefault={GoToMain}>Submit</button>
+        <h2>   </h2>
+        <button class="button" type="submit" on:click|preventDefault={GoToProfile}>Submit</button>
 
         <h1 class="main">Do not have account yet? Register here!</h1>
         <button class="button" on:click|preventDefault={GoToRegister}>Register</button>

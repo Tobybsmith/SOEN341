@@ -13,8 +13,6 @@
             confirmpassword
         });
 
-        
-
         await push ('/login');
     }
 
@@ -22,11 +20,8 @@
         goto("/profile");
     }
 
-    function GoToEmployee(){
-        goto("/employee");
-    }
-
     let show = false
+
 </script>
 
 <main class="root">
@@ -35,11 +30,11 @@
             <svg class="name-svg" width="50" height="1.5" viewBox="0 0 400 125" xmlns="http://www.w3.org/2000/svg">
                 <g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="white" stroke-width="1.5mm" fill="#212121"></g></svg></span></div>
     <form on:submit|preventDefault={submit}>
-        <h1 class="main">You don't want to miss out! Register yourself here!</h1>
+        <h1 class="main">Register your company here!</h1>
         
-        <h2 class="main">Full Name:</h2>
+        <h2 class="main">Company Name:</h2>
         <div class="form-floating">
-            <input bind:value={name} class="main" placeholder="Full Name">
+            <input bind:value={name} class="main" placeholder="Company Name">
         </div>
 
         <h2 class="main">Email Address:</h2>
@@ -82,8 +77,6 @@
         </div>
         <h2>   </h2>
         <button class="button" type="submit" on:click|preventDefault={GoToProfile}>Submit</button>
-        <h1>Are you an employer and want to post a job? Click the button below!</h1>
-        <button class="button" type="submit" on:click|preventDefault={GoToEmployee}>Employer!</button>
     </form>
 </main>
 

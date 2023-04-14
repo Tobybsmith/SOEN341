@@ -1,5 +1,6 @@
 {
 	"/": [],
+	"/employee": [],
 	"/login": [],
 	"/main": [
 		"src/routes/main/+page.js"
@@ -14,5 +15,7 @@
 		"src/routes/profile/[userid]/+page.js"
 	],
 	"/prototyping": [],
-	"/register": []
+	"/register": [
+		"src/routes/register/+page.js"
+	]
 }
