@@ -26,10 +26,10 @@
     <img  src="../../b_workers.jpg" class="worker-image" alt="A stock photo of an office scene">
     <div class="content main-col">
         <div class="title font-900 main-col" data-testid="mission_statement">Our Mission</div>
-        <p class="content-body main-col top">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad et numquam, odit necessitatibus saepe cumque autem quisquam illo assumenda unde doloribus expedita optio animi aspernatur libero aperiam quam mollitia nisi.</p>
+        <p class="content-body main-col top">Our mission is to provide a robust and easy-to-use career browsing platform for univerity students.</p>
     </div>
     <div class="content main-high">
-        <p class="content-body text-col bottom">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet facere molestiae maiores. Iure quidem itaque adipisci aspernatur, deserunt, illo asperiores, dolores velit voluptatum corrupti nisi?</p>
+        <p class="content-body text-col bottom">We are driven by getting a 71% on this project.</p>
         <div class="title font-900 text-col">What Drives Us</div>
     </div>
     <div class="testimonial-title font-900 main-col">Listen to our customers!</div>

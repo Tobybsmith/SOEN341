@@ -14,7 +14,7 @@
     const username = "tibsmith";
     const display_name = "Toby Smith";
     const user_id = 69;
-    const description = "It's a SOEN world and we're just living in it.";
+    const description = "It's a SOEN world and we're just living in it. 🚬";
     const location = "Montreal, Canada";
 
     // const img = users(image);

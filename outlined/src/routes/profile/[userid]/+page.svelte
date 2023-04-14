@@ -23,23 +23,23 @@
     // const location = user.address.city;
     console.log(user)
 
-    const img = user.profilePicture;
-    const username = user.fullName;
-    const display_name = user.fullName;
-    const user_id = user.id;
+    const img = "null"
+    const username = "Guy Guy";
+    const display_name = "Mr. Guy";
+    const user_id = 100;
 
    // const description = user.description;
   //  const location = user.location;
   //  const user_resume_ref = user.academicDegree;
 
-    const description = user.company.title;
-    const location = user.address.city;
+    const description = 'Cool guy';
+    const location = 'Montreal';
     export let applied : [typeof SvelteComponent, Record<string, any>][]= [
         [Post, {title: "FPGA Validation Intern",  description: "Applicant must have GPA > 2.9, and 2+ years experince with C++ and Python", id:0}],
         [Post, {title: "Stock Photo Model", description: "Applicant must either be conventionally beautiful or very weird looking.", id: 1}],
     ];
     export let bk : [typeof SvelteComponent, Record<string, any>][]= [
-        [Post, {title: "Millionaire in training",  description: "Applicant must be charismatic and overall chill like that ;)", id:0}],
+        [Post, {title: "Millionaire in training",  description: "Applicant must be charismatic and overall chill like that ;)", id:2}],
     ];
 
 

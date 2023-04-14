@@ -1,12 +1,13 @@
 <script>
     import Post from "../post/PostInList.svelte"
 
-    export let poster = 'null'
+    export let poster = 'Matrox Graphics Inc.'
     export let description = 'null'
     export let title = 'null'
-    export let date = 'null'
-    export let salary = 0;
     export let job_id = -1;
+    export let date = string(job_id) + ' days ago';
+    export let salary = 0;
+    
     //EN, FR, BI, CUSTOMER, DEGREE, CONTRACT
     export let tags = [false, false, false, false, false, false];
 
