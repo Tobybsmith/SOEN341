@@ -22,7 +22,7 @@
     }
     function GoToProfile()
     {
-        goto("/profile");
+        goto("/main");
     }
 
     function GoToRegister(){
