@@ -416,22 +416,12 @@
                 
             </div>
 
-            <!-- <div class="job-container">
-                {#each jobs as job}
-                <h2>{job.todo}</h2>
-                {/each}
-            </div> -->
-
-
             <span class="expanded-post">
                 {#if visible}
                 <ExpandedPost poster= {poster} description= {description} title= {title} date= {date}/>
                 {/if}
             </span>
         </div>
-        
-
-
     </main> 
 
 

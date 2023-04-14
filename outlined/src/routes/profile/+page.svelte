@@ -11,11 +11,11 @@
     const users = data.users
 
     const img = "../../gogh.jpg";
-    const username = "vinnyG";
-    const display_name = "Vincent Van Gogh";
+    const username = "tibsmith";
+    const display_name = "Toby Smith";
     const user_id = 69;
-    const description = "🖌️ I love painting and cutting my own ear off";
-    const location = "The Hague, Netherlands";
+    const description = "It's a SOEN world and we're just living in it.";
+    const location = "Montreal, Canada";
 
     // const img = users(image);
     // const username = data.user_data.db_username;
