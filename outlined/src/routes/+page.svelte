@@ -25,7 +25,7 @@
     <!-- svelte-ignore a11y-img-redundant-alt -->
     <img  src="../../b_workers.jpg" class="worker-image" alt="A stock photo of an office scene">
     <div class="content main-col">
-        <div class="title font-900 main-col">Our Mission</div>
+        <div class="title font-900 main-col" data-testid="mission_statement">Our Mission</div>
         <p class="content-body main-col top">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad et numquam, odit necessitatibus saepe cumque autem quisquam illo assumenda unde doloribus expedita optio animi aspernatur libero aperiam quam mollitia nisi.</p>
     </div>
     <div class="content main-high">
